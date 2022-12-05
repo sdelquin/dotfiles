@@ -1,1 +1,58 @@
-/Users/sdelquin/.pyenv-tk
+alias initvirtualenv='pip install black flake8 mypy ipython'
+alias lsvirtualenv='ls .pyenv/versions | grep -vE "^[[:digit:]]+" | sort'
+alias lspy='pyenv versions | perl -lne "/(\d+.\d+.\d+)/ && print \$1;" | uniq'
+
+# Shortcut to create virtualenvs with pyenv
+# ARGUMENT! -> version of Python to use inside the virtualenv
+mkvirtualenv() {
+    venv=$(basename "$PWD")
+    pyenv virtualenv $@ $venv
+    source ~/.pyenv/versions/$venv/bin/activate
+    pip install -U pip
+    pip install wheel
+}
+
+# Shortcut to remove virtualenvs with pyenv
+rmvirtualenv() {
+    #pyenv uninstall $@
+    pyenv virtualenv-delete $@
+}
+
+# Activate virtualenv
+workon() {
+    project_name=$@
+    source "$HOME/.pyenv/versions/$project_name/bin/activate"
+    m
+}
+
+# CD to project directory based on current active virtualenv
+m() {
+    project_name=$(basename "$VIRTUAL_ENV")
+    project_dir=$(find ~/Code -type d -maxdepth 2 | grep $project_name | head -1)
+    if [ -d "$project_dir" ]; then
+        cd $project_dir
+    fi
+}
+
+# activate virtualenv depending on PWD (and parents)
+s() {
+    dir=$PWD
+    while [ $dir != '/' ]
+    do
+        project=$(basename $dir)
+        venv="$HOME/.pyenv/versions/$project/bin/activate"
+        if test -f "$venv"; then
+            source "$venv"
+            break
+        fi
+        dir=$(dirname $dir)
+    done
+}
+
+# Ref: https://bit.ly/3FdYaV5
+list_virtualenvs() {
+    COMPREPLY=$(lsvirtualenv)
+}
+
+complete -F list_virtualenvs workon
+complete -F list_virtualenvs rmvirtualenv
