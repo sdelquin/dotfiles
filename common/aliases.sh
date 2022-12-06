@@ -1,0 +1,10 @@
+alias clean_pyc="find . -name *.pyc -exec rm {} \;"
+alias pstree="pstree -g2"
+alias serve="python -m http.server"
+alias tree="tree -C"
+alias ll='lsd -F -l --date relative'
+alias lla='lsd -F -la --date relative'
+alias bat='bat -p'
+alias g='rg --no-ignore --hidden'
+alias f='fd'
+alias p='ipython -i $DOTFILES/common/ipython.py'

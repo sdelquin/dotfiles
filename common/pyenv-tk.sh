@@ -1,6 +1,7 @@
 alias initvirtualenv='pip install black flake8 mypy ipython'
 alias lsvirtualenv='ls .pyenv/versions | grep -vE "^[[:digit:]]+" | sort'
 alias lspy='pyenv versions | perl -lne "/(\d+.\d+.\d+)/ && print \$1;" | uniq'
+alias pyx='pyenv deactivate; cd; clear'
 
 # Shortcut to create virtualenvs with pyenv
 # ARGUMENT! -> version of Python to use inside the virtualenv

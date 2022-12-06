@@ -1,0 +1,180 @@
+"Minimalist Vim Plugin Manager - https://github.com/junegunn/vim-plug
+"After adding a new plugin, type :so % to reload this file and run :PlugInstall
+"To uninstall a plugin: comment/delete plugin line, type :so % and run :PlugClean
+call plug#begin('~/.vim/plugged')
+    Plug 'kien/ctrlp.vim'
+    Plug 'itchyny/lightline.vim'
+    Plug 'vim-airline/vim-airline'
+    Plug 'preservim/nerdtree'
+    Plug 'vim-python/python-syntax'
+    Plug 'mtdl9/vim-log-highlighting'
+    Plug 'joshdick/onedark.vim'
+    Plug 'arielrossanigo/dir-configs-override.vim'
+    Plug 'preservim/nerdcommenter'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'tpope/vim-surround'
+    Plug 'NLKNguyen/papercolor-theme'
+    Plug 'tpope/vim-fugitive'
+    Plug 'mattn/emmet-vim'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    Plug 'tmhedberg/SimpylFold'
+    Plug 'vim-syntastic/syntastic'  " pip install flake8
+    Plug 'psf/black'  " pip install black
+    Plug 'fisadev/vim-isort'  " Dependencia: https://bit.ly/3G4ZD34
+    Plug 'frazrepo/vim-rainbow'
+call plug#end()
+
+colorscheme PaperColor
+
+set expandtab  " hitting Tab in insert mode will produce the appropriate number of spaces
+set tabstop=4  " tell vim how many columns a tab counts for
+set softtabstop=4  " control how many columns vim uses when you hit Tab in insert mode
+set shiftwidth=4  " control how many columns text is indented with the reindent operations (<< and >>)
+set incsearch  " incremental search
+set ignorecase  " search is case insensitive but you can add \C to make it sensitive
+set smartcase  " will automatically switch to a case-sensitive search if you use any capital letters
+set ls=2  " always show status bar
+syntax on  " syntax highlight on
+set ruler  " show the line and column number of the cursor position
+set number " precede each line with its line number
+set cursorline  " show cursor line
+set wildmenu  " command line completion
+set scrolloff=5  " when scrolling, keep cursor 5 lines away from screen border
+set autoindent  " auto indentation
+set foldmethod=indent  " enable folding
+set foldlevel=99  " max folding level
+set backspace=indent,eol,start  " backscape like in other programs
+
+" Disable beep and flash with an autocmd
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+" Enhanced vim syntax highlighting
+let g:python_highlight_all = 1
+
+" Settings per filetype
+autocmd Filetype html setlocal ts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sw=2
+autocmd Filetype vue setlocal ts=2 sw=2
+"
+"autocmd Filetype python setlocal colorcolumn=88
+autocmd Filetype json setlocal ts=2 sw=2
+"
+" Run current buffer with Python
+autocmd FileType python map <buffer> ll :exec '!clear; python' shellescape(@%, 1)<CR>
+" comment block code
+autocmd FileType python vnoremap <silent> # :s/^/#/<cr>:noh<cr>
+autocmd FileType python vnoremap <silent> -# :s/^#//<cr>:noh<cr>
+" pycheck (pip install -U git+http://g.pycheck.es)
+autocmd FileType python map <buffer> ññ :exec '!clear; pycheck check' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> çç :exec '!clear; pycheck show' shellescape(@%, 1)<CR>
+
+
+" ==============================
+" mappings
+" ==============================
+
+let mapleader="ç"
+
+" Switch between windows (mainly for Nerdtree and opened files)
+map º <C-w><C-w>
+
+" save as sudo
+cmap w!! w !sudo tee "%"
+
+" reselect text after indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" select current line without identation
+nnoremap vv ^vg_
+
+" remap up and down keys to navigate on warp lines
+noremap <up> gk
+noremap <down> gj
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
+" Switch opened buffers
+nnoremap <F2> :e#<CR>
+
+" clear empty spaces at the end of lines on save of python files
+autocmd BufWritePre *.py :%s/\s\+$//e
+
+" duplicate line
+nnoremap dl :t.<CR>
+
+" enable mouse
+nnoremap mm :set mouse=a<CR>
+" disable mouse
+nnoremap mx :set mouse=<CR>
+
+" display line numbers
+nnoremap <c-n> :set nu!<CR>
+
+" duplicate visual block
+vnoremap a y'>p
+
+" ============================
+" Plugins configuration
+" ============================
+
+" NERDTree
+" ---------------------------------------------------------
+
+" toggle nerdtree display
+map <F3> :NERDTreeToggle<CR>
+" open nerdtree with the current file selected
+nmap <F4> :NERDTreeFind<CR>
+" dont show this files
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__']
+" show cursor line
+let NERDTreeHighlightCursorline = 1
+" Open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Black
+" ---------------------------------------------------------
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
+
+" Isort
+" ---------------------------------------------------------
+augroup isort_on_save
+  autocmd!
+  autocmd BufWritePre *.py Isort
+augroup end
+
+" Syntastic
+" ---------------------------------------------------------
+let g:syntastic_python_flake8_args = "--max-line-length=92"
+
+" Black
+" ---------------------------------------------------------
+let g:black_skip_string_normalization = 1
+let g:black_linelength = 92
+
+" Ctrlp
+" ---------------------------------------------------------
+" Show the results from top to bottom
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_working_path_mode = 0
+
+" Emmet
+" ---------------------------------------------------------
+let g:user_emmet_leader_key='¡'
+
+" Ultisnips
+" ---------------------------------------------------------
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Rainbow
+" ---------------------------------------------------------
+au FileType c,python call rainbow#load()
