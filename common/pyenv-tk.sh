@@ -1,5 +1,5 @@
 alias initvirtualenv='pip install black flake8 mypy ipython'
-alias lsvirtualenv='ls .pyenv/versions | grep -vE "^[[:digit:]]+" | sort'
+alias lsvirtualenv='ls ~/.pyenv/versions | grep -vE "^[[:digit:]]+" | sort'
 alias lspy='pyenv versions | perl -lne "/(\d+.\d+.\d+)/ && print \$1;" | uniq'
 alias pyx='pyenv deactivate; cd; clear'
 
@@ -49,11 +49,3 @@ s() {
         dir=$(dirname $dir)
     done
 }
-
-# Ref: https://bit.ly/3FdYaV5
-list_virtualenvs() {
-    COMPREPLY=$(lsvirtualenv)
-}
-
-complete -F list_virtualenvs workon
-complete -F list_virtualenvs rmvirtualenv

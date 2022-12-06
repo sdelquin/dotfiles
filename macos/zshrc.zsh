@@ -4,6 +4,7 @@ eval $(/opt/homebrew/bin/brew shellenv)
 source $DOTFILES/common/shrc
 source $DOTFILES/macos/functions.sh
 source $DOTFILES/macos/aliases.sh
+source $DOTFILES/macos/autocompletion.sh
 
 # Solución al problema de que salga fondo blanco al pegar texto en consola
 # https://news.ycombinator.com/item?id=26757438
