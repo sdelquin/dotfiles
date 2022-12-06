@@ -29,7 +29,7 @@ workon() {
 # CD to project directory based on current active virtualenv
 m() {
     project_name=$(basename "$VIRTUAL_ENV")
-    project_dir=$(find ~/Code -type d -maxdepth 2 | grep $project_name | head -1)
+    project_dir=$(find ~/code -maxdepth 2 -type d | grep $project_name | head -1)
     if [ -d "$project_dir" ]; then
         cd $project_dir
     fi

@@ -1,8 +1,6 @@
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init --path)"
-#eval "$(pyenv virtualenv-init -)"
+source $DOTFILES/common/aliases.sh
+source $DOTFILES/common/functions.sh
+source $DOTFILES/common/pyenv-init.sh
+source $DOTFILES/common/pyenv-tk.sh
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+export PATH=$PATH:$HOME/.local/bin

@@ -1,5 +1,3 @@
-source $DOTFILES/common/functions.sh
-
 # copy file contents to clipboard
 copy() {
     cat $1 | pbcopy

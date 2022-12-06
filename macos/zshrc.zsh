@@ -4,6 +4,10 @@
 #source $DOTFILES/macos/zshrc.zsh
 # ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
+source $DOTFILES/common/shrc
+source $DOTFILES/macos/functions.sh
+source $DOTFILES/macos/aliases.sh
+
 # Solución al problema de que salga fondo blanco al pegar texto en consola
 # https://news.ycombinator.com/item?id=26757438
 zle_highlight+=(paste:none)
@@ -11,12 +15,7 @@ zle_highlight+=(paste:none)
 # Add brew binaries to the path
 eval $(/opt/homebrew/bin/brew shellenv)
 
-source $DOTFILES/macos/functions.sh
-source $DOTFILES/macos/aliases.sh
-source $DOTFILES/common/pyenv-tk.sh
-source $DOTFILES/common/shrc
-
-export PATH=$PATH:$HOME/bin:$HOME/.local/bin
+export PATH=$PATH:$HOME/bin
 
 ssh-add $HOME/.ssh/id_rsa 2> /dev/null
 

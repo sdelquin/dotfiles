@@ -1,5 +1,3 @@
-source $DOTFILES/common/aliases.sh
-
 alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias d="cd ~/Desktop"

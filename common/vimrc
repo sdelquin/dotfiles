@@ -16,17 +16,16 @@ call plug#begin('~/.vim/plugged')
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'tpope/vim-fugitive'
     Plug 'mattn/emmet-vim'
-    Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'tmhedberg/SimpylFold'
     Plug 'vim-syntastic/syntastic'  " pip install flake8
     Plug 'psf/black'  " pip install black
-    Plug 'fisadev/vim-isort'  " Dependencia: https://bit.ly/3G4ZD34
     Plug 'frazrepo/vim-rainbow'
 call plug#end()
 
 colorscheme PaperColor
 
+set background=dark
 set expandtab  " hitting Tab in insert mode will produce the appropriate number of spaces
 set tabstop=4  " tell vim how many columns a tab counts for
 set softtabstop=4  " control how many columns vim uses when you hit Tab in insert mode
@@ -143,13 +142,6 @@ augroup black_on_save
   autocmd BufWritePre *.py Black
 augroup end
 
-" Isort
-" ---------------------------------------------------------
-augroup isort_on_save
-  autocmd!
-  autocmd BufWritePre *.py Isort
-augroup end
-
 " Syntastic
 " ---------------------------------------------------------
 let g:syntastic_python_flake8_args = "--max-line-length=92"
@@ -168,12 +160,6 @@ let g:ctrlp_working_path_mode = 0
 " Emmet
 " ---------------------------------------------------------
 let g:user_emmet_leader_key='¡'
-
-" Ultisnips
-" ---------------------------------------------------------
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Rainbow
 " ---------------------------------------------------------
