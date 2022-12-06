@@ -3,7 +3,17 @@ take() {
     mkdir -p $dir && cd $dir
 }
 
+# Dependencia: https://iterm2.com/documentation-utilities.html
 copy() {
+    if [ -z $@ ];
+    then
+        it2copy
+    else
+        it2copy < $@
+    fi
+}
+
+xcopy() {
     if [ -z $@ ];
     then
         xclip -sel c

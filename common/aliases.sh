@@ -1,5 +1,4 @@
 alias clean_pyc="find . -name *.pyc -exec rm {} \;"
-alias pstree="pstree -g2"
 alias serve="python -m http.server"
 alias tree="tree -C"
 alias ll='lsd -F -l --date relative'

@@ -60,6 +60,8 @@ curl -LO https://github.com/dandavison/delta/releases/download/0.15.1/git-delta-
 sudo dpkg -i git-delta-musl_0.15.1_amd64.deb
 ```
 
+Para usar la función `copy()` necesitamos instalar la [Shell Integration de iTerm2](https://iterm2.com/documentation-utilities.html). En otro caso se puede usar la función `xcopy()` que hace uso de `xclip`.
+
 Dependencias apt:
 
 ```console
