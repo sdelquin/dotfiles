@@ -1,9 +1,3 @@
-# AÑADIR ESTO AL FINAL DEL FICHERO ~/.zshrc
-# ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-#export DOTFILES=$HOME/.dotfiles
-#source $DOTFILES/macos/zshrc.zsh
-# ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
-
 # Add brew binaries to the path
 eval $(/opt/homebrew/bin/brew shellenv)
 

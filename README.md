@@ -35,6 +35,13 @@ Symlinks:
 ln -s .dotfiles/macos/vimrc .vimrc
 ```
 
+Añadir al final del fichero `~/.zshrc`:
+
+```bash
+export DOTFILES=$HOME/.dotfiles
+source $DOTFILES/macos/zshrc.zsh
+```
+
 ## Linux
 
 Dependencias externas:
@@ -65,6 +72,13 @@ Symlinks:
 
 ```console
 ln -s .dotfiles/linux/vimrc .vimrc
+```
+
+Añadir al final del fichero `~/.bashrc`:
+
+```bash
+export DOTFILES=$HOME/.dotfiles
+source $DOTFILES/linux/bashrc
 ```
 
 ## Vim
