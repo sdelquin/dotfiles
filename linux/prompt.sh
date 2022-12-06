@@ -8,7 +8,7 @@ parse_git_branch() {
 parse_virtualenv() {
     if [[ ! -z "${VIRTUAL_ENV}" ]]; then
         virtualenv=$(basename $VIRTUAL_ENV)
-        echo "[⺒$virtualenv] "
+        echo "[𝕍:$virtualenv] "
     fi
 }
 
