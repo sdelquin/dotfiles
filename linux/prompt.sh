@@ -8,8 +8,14 @@ parse_git_branch() {
 parse_virtualenv() {
     if [[ ! -z "${VIRTUAL_ENV}" ]]; then
         virtualenv=$(basename $VIRTUAL_ENV)
-        echo "[𝕍:$virtualenv] "
+        echo "[⧩ $virtualenv] "
     fi
 }
 
-export PS1="$RUNNING_SYMBOL\[\033[01;35m\]\$(parse_virtualenv)\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[91m\]\$(parse_git_branch)\[\e[00m\]$ "
+check_git_changes() {
+    if [ -d .git ] && [[ `git status --porcelain` ]]; then
+        echo '⚡'
+    fi
+}
+
+export PS1="$RUNNING_SYMBOL\[\033[01;35m\]\$(parse_virtualenv)\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]\$(parse_git_branch)\[\033[01;33m\]\$(check_git_changes)\[\e[00m\]$ "
