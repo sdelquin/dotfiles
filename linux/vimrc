@@ -1,4 +1,4 @@
-source $DOTFILES/common/vimrc
+source /home/sdelquin/.dotfiles/common/vimrc
 
 " copy selected text to clipboard
 vnoremap <C-y> :'<,'>w !xclip -selection clipboard<Cr><Cr>

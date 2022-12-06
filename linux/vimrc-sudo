@@ -1,2 +1,0 @@
-let $DOTFILES='/home/sdelquin/.dotfiles'
-source $DOTFILES/linux/vimrc
