@@ -13,7 +13,7 @@ parse_virtualenv() {
 }
 
 check_git_changes() {
-    if [ -d .git ] && [[ `git status --porcelain` ]]; then
+    if [[ `git status --porcelain 2> /dev/null` ]]; then
         echo '⚡'
     fi
 }
