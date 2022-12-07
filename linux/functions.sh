@@ -7,9 +7,9 @@ take() {
 copy() {
     if [ -z $@ ];
     then
-        it2copy
+        ~/.iterm2/it2copy
     else
-        it2copy < $@
+        ~/.iterm2/it2copy < $@
     fi
 }
 
