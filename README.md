@@ -26,7 +26,7 @@ ln -s .dotfiles/common/gitconfig .gitconfig
 Dependencias:
 
 ```console
-brew install lsd bat ripgrep delta
+brew install lsd bat ripgrep delta zoxide
 ```
 
 Symlinks:
