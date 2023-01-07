@@ -12,5 +12,3 @@ alias sync-alu="scp *.JPG hetzner:/usr/share/fotos/alumnado && mv *.JPG procesad
 alias sync-prof="scp *.JPG hetzner:/usr/share/fotos/profesorado && mv *.JPG procesadas"
 alias sync-pas="scp *.JPG hetzner:/usr/share/fotos/pas && mv *.JPG procesadas"
 alias mount-medusa="open 'smb://sdelqui@TFQSC501/Usuarios/sdelqui'"
-alias apycheck='source ~/bin/activate-pycheck.sh'
-alias amemproc='source ~/bin/activate-memproc.sh'
