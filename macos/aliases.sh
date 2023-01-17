@@ -7,6 +7,7 @@ alias fpath="python -c 'import os,sys;print(os.path.realpath(sys.argv[1]))'"
 alias py="source ~/.pyenv/versions/sandbox/bin/activate && p && deactivate"
 alias kstats='sudo killall systemstats'
 alias kfinder='sudo killall Finder'
+alias kcode='kill -9 `ps aux | grep -i "code helper" | tr -s " " | grep -v grep | cut -d" " -f2 | xargs`'
 alias o='open .'
 alias sync-alu="scp *.JPG hetzner:/usr/share/fotos/alumnado && mv *.JPG procesadas"
 alias sync-prof="scp *.JPG hetzner:/usr/share/fotos/profesorado && mv *.JPG procesadas"
