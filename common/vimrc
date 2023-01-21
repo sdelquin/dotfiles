@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-syntastic/syntastic'  " pip install flake8
     Plug 'psf/black'  " pip install black
     Plug 'frazrepo/vim-rainbow'
+    Plug 'mechatroner/rainbow_csv'
 call plug#end()
 
 colorscheme PaperColor
