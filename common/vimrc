@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'psf/black'  " pip install black
     Plug 'frazrepo/vim-rainbow'
     Plug 'mechatroner/rainbow_csv'
+    Plug 'ervandew/supertab'
 call plug#end()
 
 colorscheme PaperColor
