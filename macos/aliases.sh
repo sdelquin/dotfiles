@@ -4,7 +4,6 @@ alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/co
 alias d="cd ~/Desktop"
 alias e="code ."
 alias fpath="python -c 'import os,sys;print(os.path.realpath(sys.argv[1]))'"
-alias py="source ~/.pyenv/versions/sandbox/bin/activate && clear && p && deactivate"
 alias kstats='sudo killall systemstats'
 alias kfinder='sudo killall Finder'
 alias kcode='kill -9 `ps aux | grep -i "code helper" | tr -s " " | grep -v grep | cut -d" " -f2 | xargs`'
