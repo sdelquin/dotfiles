@@ -1,7 +1,6 @@
 alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 alias pstree="pstree -g2"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-alias d="cd ~/Desktop"
 alias e="code ."
 alias fpath="python -c 'import os,sys;print(os.path.realpath(sys.argv[1]))'"
 alias kstats='sudo killall systemstats'
