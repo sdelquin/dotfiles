@@ -5,10 +5,12 @@ alias d='deactivate; cd; clear'
 
 # Shortcut to create virtualenvs with pyenv
 # ARGUMENT! -> version of Python to use inside the virtualenv
+# Example: $ mkvirtualenv 3.11.0
 mkvirtualenv() {
     venv=$(basename "$PWD")
     pyenv virtualenv $@ $venv
-    source ~/.pyenv/versions/$venv/bin/activate
+    #source ~/.pyenv/versions/$venv/bin/activate
+    echo $venv > .python-version
     pip install -U pip
     pip install wheel
 }
