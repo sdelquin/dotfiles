@@ -9,10 +9,10 @@ alias d='deactivate; cd; clear'
 mkvirtualenv() {
     venv=$(basename "$PWD")
     pyenv virtualenv $@ $venv
-    #source ~/.pyenv/versions/$venv/bin/activate
-    echo $venv > .python-version
+    source ~/.pyenv/versions/$venv/bin/activate
     pip install -U pip
     pip install wheel
+    echo $venv > .python-version
 }
 
 # Shortcut to remove virtualenvs with pyenv
