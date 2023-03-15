@@ -19,7 +19,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'tmhedberg/SimpylFold'
     Plug 'vim-syntastic/syntastic'  " pip install flake8
-    Plug 'psf/black'  " pip install black
+    " Para que funcione bien black con las últimas versiones
+    " de Python, vim debe estar compilado con las últimas
+    " versiones de Python.
+    " Se crea un entorno virtual en ~/.vim/black
+    Plug 'psf/black'
     Plug 'frazrepo/vim-rainbow'
     Plug 'mechatroner/rainbow_csv'
     Plug 'ervandew/supertab'
