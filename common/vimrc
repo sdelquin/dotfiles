@@ -28,8 +28,8 @@ call plug#end()
 " Notas sobre plugins
 " ===================
 " SYNTASTIC:
-" pip install pylint mypy
-" La configuración de pylint está en ~/.pylintrc
+" pip install flake8 mypy
+" La configuración de flake8 está en ~/.flake8
 " La configuración de mypy está en ~/.mypy.ini
 " ---------
 " BLACK:
@@ -159,7 +159,8 @@ augroup end
 
 " Syntastic
 " ---------------------------------------------------------
-let g:syntastic_python_checkers = ['pylint', 'mypy']
+let g:syntastic_python_checkers = ['flake8', 'mypy']
+let g:syntastic_python_flake8_args = "--config ~/.flake8"
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 0
 

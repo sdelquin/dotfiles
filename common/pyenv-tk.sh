@@ -1,4 +1,4 @@
-alias initvirtualenv='pip install black pylint mypy ipython'
+alias initvirtualenv='pip install black flake8 mypy ipython'
 alias lsvirtualenv='ls ~/.pyenv/versions | grep -vE "^[[:digit:]]+" | sort'
 alias lspy='pyenv versions | perl -lne "/(\d+.\d+.\d+)/ && print \$1;" | uniq'
 alias d='deactivate; cd; clear'

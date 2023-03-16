@@ -24,14 +24,14 @@ git clone git@github.com:sdelquin/dotfiles.git ~/.dotfiles
 
 ```console
 pyenv
-pip install pylint mypy black
+pip install flake8 mypy black
 ```
 
 ### Symlinks <!-- omit from toc -->
 
 ```console
 ln -s ~/.dotfiles/common/gitconfig .gitconfig
-ln -s ~/.dotfiles/common/pylintrc .pylintrc
+ln -s ~/.dotfiles/common/flake8 .flake8
 ln -s ~/.dotfiles/common/mypy.ini .mypy.ini
 ln -s ~/.dotfiles/common/black .config/black
 ```
