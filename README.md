@@ -30,10 +30,10 @@ pip install pylint mypy black
 ### Symlinks <!-- omit from toc -->
 
 ```console
-ln -s .dotfiles/common/gitconfig .gitconfig
-ln -s .dotfiles/common/pylintrc .pylintrc
-ln -s .dotfiles/common/mypy.ini .mypy.ini
-ln -s .dotfiles/common/black .config/black
+ln -s ~/.dotfiles/common/gitconfig .gitconfig
+ln -s ~/.dotfiles/common/pylintrc .pylintrc
+ln -s ~/.dotfiles/common/mypy.ini .mypy.ini
+ln -s ~/.dotfiles/common/black .config/black
 ```
 
 ## MacOS
@@ -47,7 +47,7 @@ brew install lsd bat ripgrep delta zoxide
 ### Symlinks
 
 ```console
-ln -s .dotfiles/macos/vimrc .vimrc
+ln -s ~/.dotfiles/macos/vimrc .vimrc
 ```
 
 Añadir al final del fichero `~/.zshrc`:
@@ -86,7 +86,7 @@ sudo apt install -y xclip fonts-noto-color-emoji
 ### Symlinks
 
 ```console
-ln -s .dotfiles/linux/vimrc .vimrc
+ln -s ~/.dotfiles/linux/vimrc .vimrc
 ```
 
 Añadir al final del fichero `~/.bashrc`:
