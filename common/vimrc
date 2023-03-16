@@ -18,16 +18,25 @@ call plug#begin('~/.vim/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'honza/vim-snippets'
     Plug 'tmhedberg/SimpylFold'
-    Plug 'vim-syntastic/syntastic'  " pip install flake8
-    " Para que funcione bien black con las últimas versiones
-    " de Python, vim debe estar compilado con las últimas
-    " versiones de Python.
-    " Se crea un entorno virtual en ~/.vim/black
+    Plug 'vim-syntastic/syntastic'
     Plug 'psf/black'
     Plug 'frazrepo/vim-rainbow'
     Plug 'mechatroner/rainbow_csv'
     Plug 'ervandew/supertab'
 call plug#end()
+
+" Notas sobre plugins
+" ===================
+" SYNTASTIC:
+" pip install pylint mypy
+" La configuración de pylint está en ~/.pylintrc
+" La configuración de mypy está en ~/.mypy.ini
+" ---------
+" BLACK:
+" La instalación debería crear un entorno virtual en ~/.vim/black con la
+" versión de Python con la que se compiló vim: vim --version | grep python
+" Si hay algún problema se puede recrear con el comando: BlackUpgrade
+" La configuración de black está en ~/.config/black
 
 colorscheme PaperColor
 
@@ -150,12 +159,8 @@ augroup end
 
 " Syntastic
 " ---------------------------------------------------------
-let g:syntastic_python_flake8_args = "--max-line-length=92"
-
-" Black
-" ---------------------------------------------------------
-let g:black_skip_string_normalization = 1
-let g:black_linelength = 92
+let g:syntastic_python_checkers = ['pylint', 'mypy']
+let g:syntastic_aggregate_errors = 1
 
 " Ctrlp
 " ---------------------------------------------------------
