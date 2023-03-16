@@ -1,4 +1,14 @@
-# dotfiles
+# dotfiles <!-- omit from toc -->
+
+- [Instalación](#instalación)
+- [Común](#común)
+- [MacOS](#macos)
+  - [Dependencias](#dependencias)
+  - [Symlinks](#symlinks)
+- [Linux](#linux)
+  - [Dependencias](#dependencias-1)
+  - [Symlinks](#symlinks-1)
+- [Vim](#vim)
 
 Custom dot files
 
@@ -8,28 +18,33 @@ Custom dot files
 git clone git@github.com:sdelquin/dotfiles.git ~/.dotfiles
 ```
 
-## Dependencias transversales
+## Común
+
+### Dependencias <!-- omit from toc -->
 
 ```console
-# pyenv
-pip install flake8 black
+pyenv
+pip install pylint mypy black
 ```
 
-## Symlinks transversales
+### Symlinks <!-- omit from toc -->
 
 ```console
 ln -s .dotfiles/common/gitconfig .gitconfig
+ln -s .dotfiles/common/pylintrc .pylintrc
+ln -s .dotfiles/common/mypy.ini .mypy.ini
+ln -s .dotfiles/common/black .config/black
 ```
 
 ## MacOS
 
-Dependencias:
+### Dependencias
 
 ```console
 brew install lsd bat ripgrep delta zoxide
 ```
 
-Symlinks:
+### Symlinks
 
 ```console
 ln -s .dotfiles/macos/vimrc .vimrc
@@ -44,7 +59,7 @@ source $DOTFILES/macos/zshrc.zsh
 
 ## Linux
 
-Dependencias externas:
+### Dependencias
 
 ```console
 curl -LO https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-musl_0.23.1_amd64.deb
@@ -62,15 +77,13 @@ sudo dpkg -i git-delta-musl_0.15.1_amd64.deb
 
 Para usar la función `copy()` necesitamos instalar la [Shell Integration de iTerm2](https://iterm2.com/documentation-utilities.html). En otro caso se puede usar la función `xcopy()` que hace uso de `xclip`.
 
-Dependencias apt:
-
 ```console
 sudo apt install -y xclip fonts-noto-color-emoji
 ```
 
-> 💡 Para que funcione `xclip` necesitamos disponer de un servidor X:
+> 💡 Para que funcione `xclip` necesitamos disponer de un servidor X
 
-Symlinks:
+### Symlinks
 
 ```console
 ln -s .dotfiles/linux/vimrc .vimrc
@@ -98,7 +111,7 @@ Instalar los plugins:
 vi +'PlugInstall --sync' +qa
 ```
 
-### Sólo para Linux
+### Sólo para Linux <!-- omit from toc -->
 
 Habilitar `sudo` para que utilice las mismas configuraciones `vim`:
 

@@ -1,0 +1,11 @@
+# https://pylint.readthedocs.io/en/latest/user_guide/configuration/all-options.html
+
+[FORMAT]
+max-line-length=100
+
+[MAIN]
+disable=
+    # https://pylint.readthedocs.io/en/latest/user_guide/messages/messages_overview.html
+    missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring
