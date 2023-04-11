@@ -59,6 +59,7 @@ set autoindent  " auto indentation
 set foldmethod=indent  " enable folding
 set foldlevel=99  " max folding level
 set backspace=indent,eol,start  " backscape like in other programs
+set mouse=a
 
 " Disable beep and flash with an autocmd
 set noerrorbells visualbell t_vb=
