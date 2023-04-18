@@ -32,3 +32,11 @@ Encoding: UTF-8
 RnwWeave: Sweave
 LaTeX: pdfLaTeX' > $DIR.Rproj
 }
+
+share() {
+    url=$(curl -s --upload-file $1 https://transfer.sh)
+    echo $url | pbcopy
+    echo "Shared from $url (copied to clipboard)"
+    echo "Download it with: curl -O $url"
+}
+
