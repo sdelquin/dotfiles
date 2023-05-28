@@ -2,6 +2,7 @@ source $DOTFILES/common/shrc
 source $DOTFILES/linux/functions.sh
 source $DOTFILES/linux/aliases.sh
 source $DOTFILES/linux/prompt.sh
+source $DOTFILES/linux/pyenv-init.sh
 source $DOTFILES/linux/autocompletion.sh
 
 bind 'set enable-bracketed-paste off'
