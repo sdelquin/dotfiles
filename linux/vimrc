@@ -1,4 +1,7 @@
 source /home/sdelquin/.dotfiles/common/vimrc
 
-" copy selected text to clipboard
-vnoremap <C-y> :'<,'>w !xclip -selection clipboard<Cr><Cr>
+" copy selected text to clipboard using xclip (needs X server)
+"vnoremap <C-y> :'<,'>w !xclip -selection clipboard<Cr><Cr>
+" copy selected text using iterm2 integration
+vnoremap <c-y> :w !/home/sdelquin/.iterm2/it2copy<CR><CR>
+
