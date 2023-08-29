@@ -2,6 +2,5 @@ source $DOTFILES/common/aliases.sh
 source $DOTFILES/common/functions.sh
 source $DOTFILES/common/pyenv-init.sh
 source $DOTFILES/common/pyenv-tk.sh
-source $DOTFILES/common/thefuck.sh
 
 export PATH=$PATH:$HOME/.local/bin
