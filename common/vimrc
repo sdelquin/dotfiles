@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'frazrepo/vim-rainbow'
     Plug 'mechatroner/rainbow_csv'
     Plug 'ervandew/supertab'
+    Plug 'NoahTheDuke/vim-just'
 call plug#end()
 
 " Notas sobre plugins
