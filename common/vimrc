@@ -122,16 +122,14 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 " duplicate line
 nnoremap dl :t.<CR>
 
-" enable mouse
-nnoremap mm :set mouse=a<CR>
-" disable mouse
-nnoremap mx :set mouse=<CR>
-
 " display line numbers
 nnoremap <c-n> :set nu!<CR>
 
 " duplicate visual block
 vnoremap a y'>p
+
+" toggle mouse support (https://unix.stackexchange.com/a/284636)
+nnoremap mm :exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 
 " ============================
 " Plugins configuration
