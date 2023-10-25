@@ -3,6 +3,7 @@ extend-select = ["Q"]
 exclude = ["migrations"]
 
 [flake8-quotes]
-docstring-quotes = "single"
 inline-quotes = "single"
-multiline-quotes = "single"
+
+[format]
+quote-style = "single"
