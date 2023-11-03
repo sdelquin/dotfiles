@@ -80,7 +80,7 @@ autocmd Filetype json setlocal ts=2 sw=2
 " comment block code
 autocmd FileType python vnoremap <silent> # :s/^/#/<cr>:noh<cr>
 autocmd FileType python vnoremap <silent> -# :s/^#//<cr>:noh<cr>
-" pycheck (pip install -U git+http://g.pycheck.es)
+" pycheck (pip install -U git+http://get.pycheck.es)
 autocmd FileType python map <buffer> ññ :exec '!clear; pycheck check' shellescape(@%, 1)<CR>
 autocmd FileType python map <buffer> çç :exec '!clear; pycheck show' shellescape(@%, 1)<CR>
 
