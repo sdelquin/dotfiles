@@ -1,7 +1,7 @@
 alias initvirtualenv='pip install ipython'
 alias lsvirtualenv='ls ~/.pyenv/versions | grep -vE "^[[:digit:]]+" | sort'
 alias lspy='pyenv versions | perl -lne "/(\d+.\d+.\d+)/ && print \$1;" | uniq'
-alias d='deactivate; cd; clear'
+alias d='deactivate'
 alias p="clear && ipython -i $DOTFILES/common/ipython.py"
 
 # Shortcut to create virtualenvs with pyenv
