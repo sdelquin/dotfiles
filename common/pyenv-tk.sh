@@ -1,6 +1,6 @@
 alias initvirtualenv='pip install ipython'
 alias lsvirtualenv='ls ~/.pyenv/versions | grep -vE "^[[:digit:]]+" | sort'
-alias lspy='pyenv versions | perl -lne "/(\d+.\d+.\d+)/ && print \$1;" | sort -t. -n -k1 -k2 -k3 -u'
+alias lspy='pyenv versions | perl -lne "/(\d+.\d+.\d+)/ && print \$1;" | sort -t. -k1,1 -k2,2 -k3,3 -u -n'
 alias d='deactivate'
 alias p="clear && ipython -i $DOTFILES/common/ipython.py"
 
