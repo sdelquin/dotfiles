@@ -61,6 +61,7 @@ set foldmethod=indent  " enable folding
 set foldlevel=99  " max folding level
 set backspace=indent,eol,start  " backscape like in other programs
 set mouse=
+set shortmess-=S  " show search count in the statusline
 
 " Disable beep and flash with an autocmd
 set noerrorbells visualbell t_vb=
