@@ -48,6 +48,7 @@ brew install lsd bat ripgrep delta zoxide
 
 ```console
 ln -s ~/.dotfiles/macos/vimrc .vimrc
+ln -sf ~/.dotfiles/macos/espanso.yml  "/Users/sdelquin/Library/Application Support/espanso/match/base.yml"
 ```
 
 Añadir al final del fichero `~/.zshrc`:
