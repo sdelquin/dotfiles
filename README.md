@@ -24,16 +24,16 @@ git clone git@github.com:sdelquin/dotfiles.git ~/.dotfiles
 
 ```console
 pyenv
-pip install flake8 mypy black
+pip install flake8 mypy
 ```
 
 ### Symlinks <!-- omit from toc -->
 
 ```console
-ln -s ~/.dotfiles/common/gitconfig .gitconfig
-ln -s ~/.dotfiles/common/flake8 .flake8
-ln -s ~/.dotfiles/common/mypy.ini .mypy.ini
-ln -s ~/.dotfiles/common/black .config/black
+ln -s ~/.dotfiles/common/gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/common/flake8 ~/.config/flake8
+ln -s ~/.dotfiles/common/mypy.ini ~/.config/mypy/config
+ln -s ~/.dotfiles/common/black ~/.config/black
 ```
 
 ## MacOS
@@ -48,7 +48,8 @@ brew install lsd bat ripgrep delta zoxide
 
 ```console
 ln -s ~/.dotfiles/macos/vimrc .vimrc
-ln -sf ~/.dotfiles/macos/espanso.yml  "/Users/sdelquin/Library/Application Support/espanso/match/base.yml"
+ln -sf ~/.dotfiles/macos/espanso.yml "/Users/sdelquin/Library/Application Support/espanso/match/base.yml"
+ln -s ~/.dotfiles/common/ruff.toml "/Users/sdelquin/Library/Application Support/ruff/ruff.toml"
 ```
 
 Añadir al final del fichero `~/.zshrc`:
