@@ -61,3 +61,6 @@ matches:
 
   - trigger: ":correo"
     replace: "sdelqui@gobiernodecanarias.org"
+
+  - trigger: ":done"
+    replace: "✅ Hecho!"
