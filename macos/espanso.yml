@@ -64,3 +64,6 @@ matches:
 
   - trigger: ":done"
     replace: "✅ Hecho!"
+
+  - trigger: ":tg"
+    replace: "https://t.me/sdelquin"
