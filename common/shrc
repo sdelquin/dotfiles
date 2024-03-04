@@ -2,5 +2,4 @@ source $DOTFILES/common/aliases.sh
 source $DOTFILES/common/functions.sh
 source $DOTFILES/common/pyenv-init.sh
 source $DOTFILES/common/pyenv-tk.sh
-
-export PATH=$PATH:$HOME/.local/bin
+source $DOTFILES/common/exports.sh

@@ -1,9 +1,5 @@
-alias initvirtualenv='pip install ipython'
 alias lsvirtualenv='ls ~/.pyenv/versions | grep -vE "^[[:digit:]]+" | sort'
 alias lspy='pyenv versions | perl -lne "/(\d+.\d+.\d+)/ && print \$1;" | sort -t. -k1,1 -k2,2 -k3,3 -u -n'
-alias d='deactivate'
-alias p="clear && ipython -i $DOTFILES/common/ipython.py"
-alias upip='pip install -U pip'
 
 # Shortcut to create virtualenvs with pyenv
 # ARGUMENT! -> version of Python to use inside the virtualenv
