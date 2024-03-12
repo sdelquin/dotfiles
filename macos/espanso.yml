@@ -38,14 +38,14 @@ matches:
   - trigger: ":rarrow"
     replace: "→"
 
-  - trigger: ":barrow"
+  - trigger: ":darrow"
     replace: "↓"
 
-  - trigger: ":larrow"
-    replace: "←"
+  - trigger: ":rpoint"
+    replace: "👉"
 
-  - trigger: ":tarrow"
-    replace: "↑"
+  - trigger: ":dpoint"
+    replace: "👇"
 
   - trigger: ":feliz"
     replace: "Felizzz cumpleañosss!!! 🎂🎈🎊🎁🎉"
