@@ -41,10 +41,10 @@ matches:
   - trigger: ":darrow"
     replace: "↓"
 
-  - trigger: ":rpoint"
+  - trigger: ":rapoint"
     replace: "👉"
 
-  - trigger: ":dpoint"
+  - trigger: ":dapoint"
     replace: "👇"
 
   - trigger: ":feliz"
