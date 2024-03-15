@@ -41,11 +41,23 @@ matches:
   - trigger: ":darrow"
     replace: "↓"
 
-  - trigger: ":rapoint"
+  - trigger: ":tarrow"
+    replace: "↑"
+
+  - trigger: ":larrow"
+    replace: "←"
+
+  - trigger: ":rpoint"
     replace: "👉"
 
-  - trigger: ":dapoint"
+  - trigger: ":dpoint"
     replace: "👇"
+
+  - trigger: ":tpoint"
+    replace: "👆"
+
+  - trigger: ":lpoint"
+    replace: "👈"
 
   - trigger: ":feliz"
     replace: "Felizzz cumpleañosss!!! 🎂🎈🎊🎁🎉"
