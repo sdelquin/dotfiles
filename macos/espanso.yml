@@ -41,7 +41,7 @@ matches:
   - trigger: ":darrow"
     replace: "↓"
 
-  - trigger: ":tarrow"
+  - trigger: ":uarrow"
     replace: "↑"
 
   - trigger: ":larrow"
@@ -53,7 +53,7 @@ matches:
   - trigger: ":dpoint"
     replace: "👇"
 
-  - trigger: ":tpoint"
+  - trigger: ":upoint"
     replace: "👆"
 
   - trigger: ":lpoint"
