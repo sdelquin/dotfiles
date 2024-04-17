@@ -82,3 +82,6 @@ matches:
 
   - trigger: ":orden"
     replace: "A la orden! 🫡"
+
+  - trigger: ":presupuesto"
+    replace: "Agradeciendo el tiempo invertido en la preparación del presupuesto finalmente encargaremos el pedido en otra empresa por haberlo encontrado a un mejor precio."
