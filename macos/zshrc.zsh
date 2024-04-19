@@ -10,6 +10,10 @@ source $DOTFILES/macos/autocompletion.sh
 # https://news.ycombinator.com/item?id=26757438
 zle_highlight+=(paste:none)
 
+# Quitar mensaje de Docker
+# https://bit.ly/49NvT5I
+export DOCKER_CLI_HINTS=false
+
 export PATH=$PATH:$HOME/bin
 
 ssh-add $HOME/.ssh/id_rsa 2> /dev/null
