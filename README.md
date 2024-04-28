@@ -34,6 +34,7 @@ ln -s ~/.dotfiles/common/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/common/flake8 ~/.config/flake8
 ln -s ~/.dotfiles/common/mypy.ini ~/.config/mypy/config
 ln -s ~/.dotfiles/common/black ~/.config/black
+ln -s ~/.dotfiles/common/latexmkrc ~/.latexmkrc
 ```
 
 ## MacOS
