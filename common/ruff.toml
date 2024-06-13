@@ -1,6 +1,6 @@
 line-length = 100
 extend-select = ["Q"]
-exclude = ["migrations"]
+#exclude = ["migrations"]
 
 [flake8-quotes]
 inline-quotes = "single"
