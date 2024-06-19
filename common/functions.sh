@@ -1,6 +1,10 @@
 function addreq () {
-    pip install $1
-    pin=$(pip freeze | grep -i $1)
-    echo Adding "$pin" to requirements.txt
-    echo $pin >> requirements.txt
+    if grep -iq $1 requirements.txt; then
+        echo \"$1\" already exists in requirements.txt
+    else
+        pip install $1
+        pin=$(pip freeze | grep -i $1)
+        echo Adding \"$pin\" to requirements.txt
+        echo $pin >> requirements.txt
+    fi
 }
