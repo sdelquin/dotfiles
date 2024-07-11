@@ -11,5 +11,5 @@ function addreq () {
 
 function fpp () {
     # Find a python package within all pyenv versions
-    ls -d $HOME/.pyenv/versions/*/lib/*/site-packages/* | grep -E "$1$"
+    ls -d $HOME/.pyenv/versions/*/lib/*/site-packages/* | grep -iE "$1$"
 }
