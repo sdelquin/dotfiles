@@ -9,7 +9,6 @@ mkvirtualenv() {
     pyenv virtualenv $@ $venv
     source ~/.pyenv/versions/$venv/bin/activate
     pip install -U pip
-    pip install wheel ipython pip-autoremove
     deactivate
     echo $venv > .python-version
 }
