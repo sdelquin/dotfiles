@@ -8,3 +8,8 @@ function addreq () {
         echo $pin >> requirements.txt
     fi
 }
+
+function fpp () {
+    # Find a python package within all pyenv versions
+    ls -d $HOME/.pyenv/versions/*/lib/*/site-packages/* | grep -E "$1$"
+}
