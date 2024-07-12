@@ -90,7 +90,7 @@ autocmd FileType python map <buffer> çç :exec '!clear; pycheck show' shellesca
 " mappings
 " ==============================
 
-let mapleader="ç"
+let mapleader=" "
 
 " Switch between windows (mainly for Nerdtree and opened files)
 map º <C-w><C-w>
@@ -124,8 +124,11 @@ nnoremap dl :t.<CR>
 " display line numbers
 nnoremap <c-n> :set nu!<CR>
 
-" duplicate visual block
-vnoremap a y'>p
+" duplicate/move visual blocks
+vnoremap <leader>a y'>p
+vnoremap <leader>A y'>Gp
+vnoremap <leader>d d'>p
+vnoremap <leader>D d'>Gp
 
 " toggle mouse support (https://unix.stackexchange.com/a/284636)
 nnoremap mm :exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
