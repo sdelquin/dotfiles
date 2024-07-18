@@ -77,13 +77,9 @@ autocmd Filetype vue setlocal ts=2 sw=2
 "
 "autocmd Filetype python setlocal colorcolumn=88
 autocmd Filetype json setlocal ts=2 sw=2
-"
-" comment block code
-autocmd FileType python vnoremap <silent> # :s/^/#/<cr>:noh<cr>
-autocmd FileType python vnoremap <silent> -# :s/^#//<cr>:noh<cr>
-" pycheck (pip install -U git+http://get.pycheck.es)
-autocmd FileType python map <buffer> ññ :exec '!clear; pycheck check' shellescape(@%, 1)<CR>
-autocmd FileType python map <buffer> çç :exec '!clear; pycheck show' shellescape(@%, 1)<CR>
+
+" clear empty spaces at the end of lines on save of python files
+autocmd BufWritePre *.py :%s/\s\+$//e
 
 
 " ==============================
@@ -98,9 +94,27 @@ map º <C-w><C-w>
 " save as sudo
 cmap w!! w !sudo tee "%"
 
+" Visual mode mappings
+" --------------------
+
 " reselect text after indentation
 vnoremap < <gv
 vnoremap > >gv
+
+" duplicate/move visual blocks
+vnoremap <leader>a y'>p
+vnoremap <leader>A y'>Gp
+vnoremap <leader>d d'>p
+vnoremap <leader>D d'>Gp
+
+" comment block code
+autocmd FileType python vnoremap <silent> <nowait> <leader>c :s/^/#/<cr>:noh<cr>
+autocmd FileType python vnoremap <silent> <nowait> <leader>x :s/^#//<cr>:noh<cr>
+autocmd FileType python noremap <silent> <nowait> <leader>c :s/^/#/<cr>:noh<cr>
+autocmd FileType python noremap <silent> <nowait> <leader>x :s/^#//<cr>:noh<cr>
+
+" Normal mode mappings
+" --------------------
 
 " select current line without identation
 nnoremap vv ^vg_
@@ -115,20 +129,11 @@ nnoremap <space> za
 " Switch opened buffers
 nnoremap <F2> :e#<CR>
 
-" clear empty spaces at the end of lines on save of python files
-autocmd BufWritePre *.py :%s/\s\+$//e
-
 " duplicate line
 nnoremap dl :t.<CR>
 
 " display line numbers
 nnoremap <c-n> :set nu!<CR>
-
-" duplicate/move visual blocks
-vnoremap <leader>a y'>p
-vnoremap <leader>A y'>Gp
-vnoremap <leader>d d'>p
-vnoremap <leader>D d'>Gp
 
 " toggle mouse support (https://unix.stackexchange.com/a/284636)
 nnoremap mm :exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
