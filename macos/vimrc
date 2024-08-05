@@ -1,5 +1,0 @@
-source /Users/sdelquin/.dotfiles/common/vimrc
-
-" copy selected text to clipboard
-vnoremap <c-y> :w !pbcopy<CR><CR>
-

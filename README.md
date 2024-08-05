@@ -30,6 +30,7 @@ pip install flake8 mypy
 ### Symlinks <!-- omit from toc -->
 
 ```console
+ln -s ~/.dotfiles/common/vimrc .vimrc
 ln -s ~/.dotfiles/common/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/common/flake8 ~/.config/flake8
 ln -s ~/.dotfiles/common/mypy.ini ~/.config/mypy/config
@@ -48,7 +49,6 @@ brew install lsd bat ripgrep delta zoxide
 ### Symlinks
 
 ```console
-ln -s ~/.dotfiles/macos/vimrc .vimrc
 ln -sf ~/.dotfiles/macos/espanso.yml "/Users/sdelquin/Library/Application Support/espanso/match/base.yml"
 ln -s ~/.dotfiles/common/ruff.toml "/Users/sdelquin/Library/Application Support/ruff/ruff.toml"
 ```
@@ -91,7 +91,7 @@ sudo apt install -y xclip fonts-noto-color-emoji
 ### Symlinks
 
 ```console
-ln -s ~/.dotfiles/linux/vimrc .vimrc
+
 ```
 
 Añadir al final del fichero `~/.bashrc`:

@@ -113,6 +113,9 @@ autocmd FileType python vnoremap <silent> <nowait> <leader>x :s/^#//<cr>:noh<cr>
 autocmd FileType python noremap <silent> <nowait> <leader>c :s/^/#/<cr>:noh<cr>
 autocmd FileType python noremap <silent> <nowait> <leader>x :s/^#//<cr>:noh<cr>
 
+" copy to system clipboard
+vnoremap <leader>y "*yy
+
 " Normal mode mappings
 " --------------------
 
@@ -137,6 +140,9 @@ nnoremap <c-n> :set nu!<CR>
 
 " toggle mouse support (https://unix.stackexchange.com/a/284636)
 nnoremap mm :exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
+
+" copy to system clipboard
+nnoremap <leader>y "*yy
 
 " ============================
 " Plugins configuration
