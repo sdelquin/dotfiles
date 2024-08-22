@@ -7,14 +7,7 @@ parse_git_branch() {
 
 parse_virtualenv() {
     if [[ "${VIRTUAL_ENV}" ]]; then
-        venv_cfg=$VIRTUAL_ENV/pyvenv.cfg
-        if [[ -f "$venv_cfg" ]]; then
-            virtualenv=$(perl -ne 'print $1 if /^prompt *= *\x27(.*)\x27$/' $venv_cfg)
-        fi
-        if [[ -z $virtualenv ]]; then
-            virtualenv=$(basename $VIRTUAL_ENV)
-        fi
-        echo "❬$virtualenv❭"
+        echo "❬$VIRTUAL_ENV_PROMPT❭"
     fi
 }
 
