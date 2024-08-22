@@ -1,4 +1,3 @@
-alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 alias pstree="pstree -g2"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias e="code ."

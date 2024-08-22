@@ -14,7 +14,7 @@ zle_highlight+=(paste:none)
 # https://bit.ly/49NvT5I
 export DOCKER_CLI_HINTS=false
 
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOMEBREW_PREFIX/opt/python@3.12/libexec/bin:$HOME/bin
 
 ssh-add $HOME/.ssh/id_rsa 2> /dev/null
 
@@ -24,4 +24,4 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $DOTFILES/macos/p10k.zsh ]] || source $DOTFILES/macos/p10k.zsh
 
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
