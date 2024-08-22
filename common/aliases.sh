@@ -11,7 +11,7 @@ alias d='deactivate'
 alias p='clear; ipython -i $DOTFILES/common/ipython.py'
 alias upip='pip install -U pip'
 alias serve="python -m http.server"
-alias clean_pyc="find . -name *.pyc -exec rm {} \;"
+alias clean_pyc="find . -name '*.pyc' -exec rm {} \;"
 alias fpp='pip freeze | grep -i'
 alias cdsitepackages='cd $(find . -name site-packages -d)'
 # Docker
