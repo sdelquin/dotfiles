@@ -12,7 +12,6 @@ function cd() {
         ## If env folder is found then activate the vitualenv
         if [[ -d ./.venv ]] ; then
             source ./.venv/bin/activate
-            [[ "$(command -v uv)" ]] && alias pip='uv pip'
         fi
     else
         ## check the current folder belong to earlier VIRTUAL_ENV folder
@@ -20,7 +19,6 @@ function cd() {
         # else deactivate
         parentdir="$(dirname "$VIRTUAL_ENV")"
         if [[ "$PWD"/ != "$parentdir"/* ]] ; then
-            unalias pip >/dev/null 2>/dev/null
             deactivate
         fi
     fi
