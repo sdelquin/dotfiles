@@ -1,0 +1,39 @@
+# https://starship.rs/config/
+# Colores → https://i.sstatic.net/KTSQa.png
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = '''$os $username$hostname$directory$python$git_branch$git_status
+$character'''
+
+add_newline = false
+
+[directory]
+style = '178'
+truncate_to_repo = false
+truncation_length = 8
+
+[python]
+format = '[($version)](dimmed 120) [(\[venv: [$virtualenv](italic bold 120)\] )](bold 120)'
+
+[os]
+disabled = false
+style = '247'
+
+[os.symbols]
+Macos = ''
+Debian = '꩜'
+
+[username]
+format = '[$user]($style)'
+style_user = 'bold yellow'
+
+[hostname]
+format = '[@$hostname]($style) '
+style = 'bold yellow'
+
+[git_branch]
+style = '170'
+format = '[$symbol$branch(:$remote_branch) ]($style)'
+
+[git_status]
+style = 'bold 49'

@@ -5,9 +5,12 @@
 - [MacOS](#macos)
   - [Dependencias](#dependencias)
   - [Symlinks](#symlinks)
+  - [Starship](#starship)
+  - [`.zshrc`](#zshrc)
 - [Linux](#linux)
   - [Dependencias](#dependencias-1)
   - [Symlinks](#symlinks-1)
+  - [`.bashrc`](#bashrc)
 - [Vim](#vim)
 
 Custom dot files
@@ -23,19 +26,22 @@ git clone git@github.com:sdelquin/dotfiles.git ~/.dotfiles
 ### Dependencias <!-- omit from toc -->
 
 ```console
-pyenv
-pip install flake8 mypy
+pipx install flake8 mypy black
 ```
 
 ### Symlinks <!-- omit from toc -->
 
 ```console
-ln -s ~/.dotfiles/common/vimrc .vimrc
-ln -s ~/.dotfiles/common/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/common/flake8 ~/.config/flake8
-ln -s ~/.dotfiles/common/mypy.ini ~/.config/mypy/config
-ln -s ~/.dotfiles/common/black ~/.config/black
+ln -s ~/.dotfiles/common/vimrc ~/.vimrc
 ln -s ~/.dotfiles/common/latexmkrc ~/.latexmkrc
+ln -s ~/.dotfiles/common/gitconfig ~/.gitconfig
+
+ln -s ~/.dotfiles/common/flake8 ~/.config/flake8
+ln -s ~/.dotfiles/common/black ~/.config/black
+ln -s ~/.dotfiles/common/ruff.toml ~/.config/ruff.toml
+ln -s ~/.dotfiles/common/starship.toml ~/.config/starship.toml
+
+ln -s ~/.dotfiles/common/mypy.ini ~/.config/mypy/config
 ```
 
 ## MacOS
@@ -43,21 +49,26 @@ ln -s ~/.dotfiles/common/latexmkrc ~/.latexmkrc
 ### Dependencias
 
 ```console
-brew install lsd bat ripgrep delta zoxide
+brew install lsd bat ripgrep delta zoxide starship
 ```
 
 ### Symlinks
 
 ```console
 ln -sf ~/.dotfiles/macos/espanso.yml "/Users/sdelquin/Library/Application Support/espanso/match/base.yml"
-ln -s ~/.dotfiles/common/ruff.toml "/Users/sdelquin/Library/Application Support/ruff/ruff.toml"
 ```
+
+### Starship
+
+Con [starship](<[https://](https://starship.rs/)>) personalizamos el _prompt_ de línea de comandos. Dado que zsh ...
+
+### `.zshrc`
 
 Añadir al final del fichero `~/.zshrc`:
 
 ```bash
 export DOTFILES=$HOME/.dotfiles
-source $DOTFILES/macos/zshrc.zsh
+source $DOTFILES/macos/zshrc
 ```
 
 ## Linux
@@ -91,8 +102,10 @@ sudo apt install -y xclip fonts-noto-color-emoji
 ### Symlinks
 
 ```console
-
+# void
 ```
+
+### `.bashrc`
 
 Añadir al final del fichero `~/.bashrc`:
 
