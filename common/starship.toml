@@ -8,7 +8,7 @@ $character'''
 add_newline = false
 
 [directory]
-style = '178'
+style = 'bold 248'
 truncate_to_repo = false
 truncation_length = 8
 
@@ -20,7 +20,7 @@ disabled = false
 style = '247'
 
 [os.symbols]
-Macos = ''
+Macos = '🍎'
 Debian = '🐧'
 
 [username]
