@@ -2,12 +2,12 @@
 
 - [Instalación](#instalación)
 - [Común](#común)
-- [MacOS](#macos)
+- [🍎 MacOS](#-macos)
   - [Dependencias](#dependencias)
   - [Symlinks](#symlinks)
   - [Starship](#starship)
   - [`.zshrc`](#zshrc)
-- [Linux](#linux)
+- [🐧 Linux](#-linux)
   - [Dependencias](#dependencias-1)
   - [Symlinks](#symlinks-1)
   - [`.bashrc`](#bashrc)
@@ -44,7 +44,7 @@ ln -s ~/.dotfiles/common/starship.toml ~/.config/starship.toml
 ln -s ~/.dotfiles/common/mypy.ini ~/.config/mypy/config
 ```
 
-## MacOS
+## 🍎 MacOS
 
 ### Dependencias
 
@@ -64,31 +64,54 @@ Con [starship](<[https://](https://starship.rs/)>) personalizamos el _prompt_ de
 
 ### `.zshrc`
 
-Añadir al final del fichero `~/.zshrc`:
+Para que funcione correctamente el prompt con [starship](https://starship.rs/) es necesario desactivar [powerlevel10k](https://github.com/romkatv/powerlevel10k) ya que viene por defecto en la instalación de `zsh` para MacOS.
+
+Buscamos las siguientes líneas en el fichero `~/.zshrc` y las comentamos:
+
+```console
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
+
+# ...
+
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+Para cargar correctamente las configuraciones propias de MacOS, hay que añadir al final del fichero `~/.zshrc`:
 
 ```bash
+# CUSTOM ZONE ======================================================
 export DOTFILES=$HOME/.dotfiles
 source $DOTFILES/macos/zshrc
 ```
 
-## Linux
+## 🐧 Linux
 
 ### Dependencias
 
 ```console
+# lsd
 curl -LO https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-musl_0.23.1_amd64.deb
 sudo dpkg -i lsd-musl_0.23.1_amd64.deb
 
+# bat
 curl -LO https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-musl_0.22.1_amd64.deb
 sudo dpkg -i bat-musl_0.22.1_amd64.deb
 
+# ripgrep
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
 sudo dpkg -i ripgrep_13.0.0_amd64.deb
 
+# delta
 curl -LO https://github.com/dandavison/delta/releases/download/0.15.1/git-delta-musl_0.15.1_amd64.deb
 sudo dpkg -i git-delta-musl_0.15.1_amd64.deb
 
+# zoxide
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+
+# starship
+curl -sS https://starship.rs/install.sh | sh
 ```
 
 Para usar la función `copy()` necesitamos instalar la [Shell Integration de iTerm2](https://iterm2.com/documentation-utilities.html). En otro caso se puede usar la función `xcopy()` que hace uso de `xclip`.
@@ -107,9 +130,10 @@ sudo apt install -y xclip fonts-noto-color-emoji
 
 ### `.bashrc`
 
-Añadir al final del fichero `~/.bashrc`:
+Para cargar correctamente las configuraciones propias de Linux, hay que añadir al final del fichero `~/.bashrc`:
 
 ```bash
+# CUSTOM ZONE ======================================================
 export DOTFILES=$HOME/.dotfiles
 source $DOTFILES/linux/bashrc
 ```
