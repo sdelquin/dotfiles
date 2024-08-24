@@ -21,7 +21,7 @@ style = '247'
 
 [os.symbols]
 Macos = ''
-Debian = '꩜'
+Debian = '🐧'
 
 [username]
 format = '[$user]($style)'
