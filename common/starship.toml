@@ -13,7 +13,7 @@ truncate_to_repo = false
 truncation_length = 8
 
 [python]
-format = '[($version)](dimmed 120) [(\[venv: [$virtualenv](italic bold 120)\] )](bold 120)'
+format = '[($version)](dimmed 120) [(\[[$virtualenv](italic bold 120)\] )](bold 120)'
 
 [os]
 disabled = false
