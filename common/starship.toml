@@ -2,8 +2,8 @@
 # Colores → https://i.sstatic.net/KTSQa.png
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = '''$os $username$hostname$directory$python$git_branch$git_status
-$character'''
+format = '''[╭─](bold green)$os $username$hostname$directory$python$git_branch$git_status
+[╰─](bold green)$character'''
 
 add_newline = false
 
