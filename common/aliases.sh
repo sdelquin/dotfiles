@@ -1,3 +1,4 @@
+# Misc
 alias tree="tree -C"
 alias ll='lsd -F -l --date relative'
 alias lla='lsd -F -la --date relative'
@@ -5,6 +6,9 @@ alias bat='bat -p'
 alias g='rg'
 alias f='fd'
 alias j='just'
+alias teach='iterm2_profile Teaching'
+# Git
+alias gst='git status'
 # Python
 alias a='source .venv/bin/activate'
 alias d='deactivate'
