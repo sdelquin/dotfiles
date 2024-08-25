@@ -7,9 +7,9 @@ take() {
 copy() {
     if [ -z $@ ];
     then
-        ~/.iterm2/it2copy
+        it2copy
     else
-        ~/.iterm2/it2copy < $@
+        it2copy < $@
     fi
 }
 
@@ -20,6 +20,10 @@ xcopy() {
     else
         xclip -sel c < $@
     fi
+}
+
+copypath() {
+    pwd | it2copy 
 }
 
 # https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
