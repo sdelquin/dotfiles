@@ -3,8 +3,8 @@ source $DOTFILES/linux/functions.sh
 source $DOTFILES/linux/aliases.sh
 source $DOTFILES/linux/autocompletion.sh
 source $DOTFILES/linux/starship.sh
+source $DOTFILES/linux/exports.sh
 
 bind 'set enable-bracketed-paste off'
-export EDITOR=/usr/bin/vim
 
 eval "$(zoxide init bash)"

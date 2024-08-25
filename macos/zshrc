@@ -6,20 +6,12 @@ source $DOTFILES/macos/functions.sh
 source $DOTFILES/macos/aliases.sh
 source $DOTFILES/macos/autocompletion.sh
 source $DOTFILES/macos/starship.sh
+source $DOTFILES/macos/exports.sh
 
 # Solución al problema de que salga fondo blanco al pegar texto en consola
 # https://news.ycombinator.com/item?id=26757438
 zle_highlight+=(paste:none)
 
-# Quitar mensaje de Docker
-# https://bit.ly/49NvT5I
-export DOCKER_CLI_HINTS=false
-
-export PATH=$PATH:$HOMEBREW_PREFIX/opt/python@3.12/libexec/bin:$HOME/bin
-
 ssh-add $HOME/.ssh/id_rsa 2> /dev/null
-
-# brew install bat
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 eval "$(zoxide init zsh)"

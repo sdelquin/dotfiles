@@ -9,7 +9,7 @@ alias j='just'
 alias teach='iterm2_profile Teaching'
 # Git
 alias gst='git status'
-alias ga='git add'
+alias ga='git add .'
 alias gc='git commit -m'
 alias gca='git commit -am'
 alias gp='git push'
