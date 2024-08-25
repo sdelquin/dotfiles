@@ -7,9 +7,9 @@ take() {
 copy() {
     if [ -z $@ ];
     then
-        it2copy
+        ~/.iterm2/it2copy
     else
-        it2copy < $@
+        ~/.iterm2/it2copy < $@
     fi
 }
 
@@ -23,7 +23,7 @@ xcopy() {
 }
 
 copypath() {
-    pwd | it2copy 
+    pwd | ~/.iterm2/it2copy 
 }
 
 # https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
