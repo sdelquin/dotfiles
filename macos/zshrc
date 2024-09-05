@@ -15,3 +15,6 @@ zle_highlight+=(paste:none)
 ssh-add $HOME/.ssh/id_rsa 2> /dev/null
 
 eval "$(zoxide init zsh)"
+
+# Try to activate venv if proceed
+venv_autoactivate
