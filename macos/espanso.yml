@@ -85,3 +85,6 @@ matches:
 
   - trigger: ":presupuesto"
     replace: "Agradeciendo el tiempo invertido en la preparación del presupuesto finalmente encargaremos el pedido en otra empresa por haberlo encontrado a un mejor precio."
+
+  - trigger: ":fiscal"
+    replace: "IES Puerto de la Cruz - Telesforo Bravo\nCIF: S3511001D\nC/Las Cabezas, 7. Puerto de la Cruz, CP 38400\n922380112\n38003999@gobiernodecanarias.org\nDIR3: A05020690"
