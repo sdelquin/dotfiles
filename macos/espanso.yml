@@ -88,3 +88,9 @@ matches:
 
   - trigger: ":fiscal"
     replace: "IES Puerto de la Cruz - Telesforo Bravo\nCIF: S3511001D\nC/Las Cabezas, 7. Puerto de la Cruz, CP 38400\n922380112\n38003999@gobiernodecanarias.org\nDIR3: A05020690"
+
+  - trigger: ":success"
+    replace: "✔"
+
+  - trigger: ":error"
+    replace: "✗"
