@@ -22,7 +22,7 @@ venv_autoactivate() {
         if [[ -f $dir/.venv/bin/activate ]]; then
             #echo "Activating virtualenv from $dir/venv"
             source $dir/.venv/bin/activate
-        else
+        #else
             #echo 'Virtualenv not found'
         fi
     else
