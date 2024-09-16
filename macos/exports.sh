@@ -8,3 +8,5 @@ MAGIC_ENTER_GIT_COMMAND='ll'
 MAGIC_ENTER_OTHER_COMMAND='ll'
 # PATH
 export PATH=$PATH:$HOMEBREW_PREFIX/opt/python@3.12/libexec/bin:$HOME/bin
+# https://stackoverflow.com/a/69990888
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
