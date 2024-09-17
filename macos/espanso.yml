@@ -94,3 +94,6 @@ matches:
 
   - trigger: ":error"
     replace: "✗"
+
+  - trigger: ":angle"
+    replace: "❯"
