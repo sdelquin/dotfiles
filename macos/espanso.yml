@@ -97,3 +97,6 @@ matches:
 
   - trigger: ":angle"
     replace: "❯"
+
+  - trigger: ":ipython"
+    replace: "❯❯❯"
