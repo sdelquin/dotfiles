@@ -5,12 +5,9 @@
 - [🍎 MacOS](#-macos)
   - [Dependencias](#dependencias)
   - [Symlinks](#symlinks)
-  - [Starship](#starship)
-  - [`.zshrc`](#zshrc)
 - [🐧 Linux](#-linux)
   - [Dependencias](#dependencias-1)
   - [Symlinks](#symlinks-1)
-  - [`.bashrc`](#bashrc)
 - [Vim](#vim)
 
 Custom dot files
@@ -55,35 +52,9 @@ brew install lsd bat ripgrep delta zoxide starship
 ### Symlinks
 
 ```console
+ln -sf ~/.dotfiles/macos/zshrc ~/.zshrc
+
 ln -sf ~/.dotfiles/macos/espanso.yml "/Users/sdelquin/Library/Application Support/espanso/match/base.yml"
-```
-
-### Starship
-
-Con [starship](<[https://](https://starship.rs/)>) personalizamos el _prompt_ de línea de comandos. Dado que zsh ...
-
-### `.zshrc`
-
-Para que funcione correctamente el prompt con [starship](https://starship.rs/) es necesario desactivar [powerlevel10k](https://github.com/romkatv/powerlevel10k) ya que viene por defecto en la instalación de `zsh` para MacOS.
-
-Buscamos las siguientes líneas en el fichero `~/.zshrc` y las comentamos:
-
-```console
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
-# ...
-
-#ZSH_THEME="powerlevel10k/powerlevel10k"
-```
-
-Para cargar correctamente las configuraciones propias de MacOS, hay que añadir al final del fichero `~/.zshrc`:
-
-```bash
-# CUSTOM ZONE ======================================================
-export DOTFILES=$HOME/.dotfiles
-source $DOTFILES/macos/zshrc
 ```
 
 ## 🐧 Linux
@@ -125,17 +96,7 @@ sudo apt install -y xclip fonts-noto-color-emoji
 ### Symlinks
 
 ```console
-# void
-```
-
-### `.bashrc`
-
-Para cargar correctamente las configuraciones propias de Linux, hay que añadir al final del fichero `~/.bashrc`:
-
-```bash
-# CUSTOM ZONE ======================================================
-export DOTFILES=$HOME/.dotfiles
-source $DOTFILES/linux/bashrc
+ln -sf ~/.dotfiles/linux/bashrc ~/.bashrc
 ```
 
 ## Vim

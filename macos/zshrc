@@ -1,5 +1,25 @@
+# OH MY ZSH ======================================================
+
+export ZSH="/Users/sdelquin/.oh-my-zsh"
+plugins=(
+    # built-in plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+    docker
+    iterm2
+    copypath
+    magic-enter
+    sudo
+    web-search
+    zsh-autosuggestions  # OJO INSTALAR -> https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+    zsh-syntax-highlighting  # OJO INSTALAR -> https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
+)
+source $ZSH/oh-my-zsh.sh
+
+# CUSTOM ZONE ======================================================
+
 # Add brew binaries to the path
 eval $(/opt/homebrew/bin/brew shellenv)
+
+export DOTFILES=$HOME/.dotfiles
 
 source $DOTFILES/common/shrc
 source $DOTFILES/macos/functions.sh
