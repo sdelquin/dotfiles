@@ -38,6 +38,10 @@ call plug#end()
 " La instalación debería crear un entorno virtual en ~/.vim/black con la
 " versión de Python con la que se compiló vim: vim --version | grep python
 " Si hay algún problema se puede recrear con el comando: BlackUpgrade
+" Si no se soluciona así, probar esto:
+" $ rm -rf ~/.vim/black
+" $ vim
+" $ <esc> :Black
 " La configuración de black está en ~/.config/black
 " ---------
 " ISORT:
