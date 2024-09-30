@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'mechatroner/rainbow_csv'
     Plug 'ervandew/supertab'
     Plug 'NoahTheDuke/vim-just'
+    Plug 'brentyi/isort.vim'
 call plug#end()
 
 " Notas sobre plugins
@@ -38,6 +39,9 @@ call plug#end()
 " versión de Python con la que se compiló vim: vim --version | grep python
 " Si hay algún problema se puede recrear con el comando: BlackUpgrade
 " La configuración de black está en ~/.config/black
+" ---------
+" ISORT:
+" pipx install isort
 
 colorscheme PaperColor
 
@@ -168,6 +172,13 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 augroup black_on_save
   autocmd!
   autocmd BufWritePre *.py Black
+augroup end
+
+" isort
+" ---------------------------------------------------------
+augroup isort_on_save
+  autocmd!
+  autocmd BufWritePre *.py Isort
 augroup end
 
 " Syntastic
