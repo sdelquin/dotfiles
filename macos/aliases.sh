@@ -10,3 +10,5 @@ alias sync-alu="scp *.JPG hetzner:/usr/share/fotos/alumnado && mv *.JPG procesad
 alias sync-prof="scp *.JPG hetzner:/usr/share/fotos/profesorado && mv *.JPG procesadas"
 alias sync-pas="scp *.JPG hetzner:/usr/share/fotos/pas && mv *.JPG procesadas"
 alias mount-medusa="open 'smb://sdelqui@TFQSC501/Usuarios/sdelqui'"
+alias iface='/sbin/ifconfig | perl -nle '"'"'print $1 if /inet *(\d+\.\d+\.\d+\.\d+)/'"'"' | grep -v ^127'
+alias mserve='serve -b $(iface)'
