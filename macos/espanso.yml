@@ -102,4 +102,4 @@ matches:
     replace: "❯❯❯"
 
   - trigger: ":html"
-    replace: "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n    <title></title>\n    <!-- <link rel=\"stylesheet\" href=\"css/main.css\" />-->\n    <!-- <link rel=\"icon\" href=\"images/favicon.png\" /> -->\n  </head>\n\n  <body>\n    <!-- <script src=\"js/scripts.js\"></script> -->\n  </body>\n</html>"
+    replace: "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title></title>\n    <!-- <link rel=\"stylesheet\" href=\"css/main.css\" /> -->\n    <!-- <link rel=\"icon\" href=\"images/favicon.png\" /> -->\n  </head>\n\n  <body>\n    <!-- <script src=\"js/scripts.js\"></script> -->\n  </body>\n</html>"
