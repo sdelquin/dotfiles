@@ -8,7 +8,10 @@ cd() {
         builtin cd "$@"
     fi
 
-    venv_autoactivate
+    if [ -z "${DISABLE_AUTO_VENV}" ]
+    then
+        venv_autoactivate
+    fi
 }
 
 venv_autoactivate() {
