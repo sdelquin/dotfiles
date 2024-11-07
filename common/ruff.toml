@@ -1,9 +1,11 @@
 line-length = 100
-extend-select = ["Q"]
-#exclude = ["migrations"]
+extend-select = ["Q", "ARG001"]
 
 [flake8-quotes]
 inline-quotes = "single"
 
 [format]
 quote-style = "single"
+
+[flake8-unused-arguments]
+ignore-variadic-names = true
