@@ -112,3 +112,6 @@ matches:
     
   - trigger: ":year"
     replace: "Feliz añooo!!! Happy new Year! 🎆🥳🥂✨💫🎊🎉🎁🎈"
+
+  - trigger: ":hands"
+    replace: "hands up! 🙌"
