@@ -1,27 +1,44 @@
 # https://starship.rs/config/
 # Colores → https://i.sstatic.net/KTSQa.png
+# Iconos → https://www.nerdfonts.com/cheat-sheet
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = '''[╭─](bold green)$os $username$hostname$directory$python$git_branch$git_status
-[╰─](bold green)$character'''
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+${custom.uv}\
+${custom.virtualenv}\
+$git_branch\
+$git_status\
+\n[╰─](dimmed)\
+$character"""
 
 add_newline = false
 
 [directory]
-style = 'bold 248'
 truncate_to_repo = false
 truncation_length = 8
+format = '[](fg:#3B76F0)[ 󰝰 $path ](bg:#3B76F0 fg:#23FEFF)[](fg:#3B76F0)'
 
-[python]
-format = '[($version)](dimmed 120) [(\[[$virtualenv](italic bold 120)\] )](bold 120)'
+[custom.virtualenv]
+command = "ve=$(cat .venv/pyvenv.cfg | perl -ne 'print $1 if /[Pp]rompt *= *(.*)/'); pyv=$(python --version | perl -ne 'print $1 if /[Pp]ython *(.*)/'); echo \"$ve 󰌠 $pyv\""
+when = "[[ -n $VIRTUAL_ENV ]]"
+format = '[](#159D5B)[ $output ](bg:#159D5B fg:#0A381F)[](#159D5B)'
+
+[custom.uv]
+command = 'uv run python --version | sed "s/Python //"'
+when = 'ls | grep uv.lock'
+format = '[](#DE60E9)[ uv  $output ](bg:#DE60E9 fg:#480D4D)[](#DE60E9)'
 
 [os]
 disabled = false
-style = '247'
+format = '[$symbol](dimmed) '
 
 [os.symbols]
-Macos = '🍎'
-Debian = '🐧'
+Macos = ''
+Debian = ''
 
 [username]
 format = '[$user]($style)'
@@ -32,8 +49,7 @@ format = '[@$hostname]($style) '
 style = 'bold yellow'
 
 [git_branch]
-style = '170'
-format = '[$symbol$branch(:$remote_branch) ]($style)'
+format = '[](#FCF392)[  $branch(:$remote_branch) ](bg:#FCF392 fg:#415966)[ ](#FCF392)'
 
 [git_status]
-style = 'bold 49'
+style = 'bold #FCF392'
