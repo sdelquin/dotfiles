@@ -36,5 +36,5 @@ ssh-add $HOME/.ssh/id_rsa 2> /dev/null
 
 eval "$(zoxide init zsh)"
 
-# Try to activate venv if proceed
-venv_autoactivate
+# Try to activate envs if proceed
+manage_envs

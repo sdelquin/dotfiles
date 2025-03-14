@@ -8,6 +8,10 @@ cd() {
         builtin cd "$@"
     fi
 
+    manage_envs
+}
+
+manage_envs() {
     uv_autoactivate
     if [ -z "${DISABLE_AUTO_VENV}" ] && [ -z "${UV_ENV}" ]; then
         venv_autoactivate

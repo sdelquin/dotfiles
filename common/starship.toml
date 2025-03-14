@@ -46,7 +46,7 @@ format = '[](#e8cc17)[ venv](bg:#e8cc17 fg:#423a07 italic)[ 󰌪 $output ](bg
 format = '[](#0ee8d9)[  $branch(:$remote_branch) ](bg:#0ee8d9 fg:#022926)[ ](#0ee8d9)'
 
 [git_status]
-style = 'bold #F55B00'
+style = '#F55B00'
 
 [character]
 success_symbol = '[󰅂](bold #29F407)'
