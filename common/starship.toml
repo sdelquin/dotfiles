@@ -5,7 +5,6 @@
 
 format = """
 $os\
-$username\
 $hostname\
 $directory\
 ${custom.uv}\
@@ -40,13 +39,8 @@ format = '[$symbol](dimmed) '
 Macos = ''
 Debian = ''
 
-[username]
-format = '[$user]($style)'
-style_user = 'bold yellow'
-
 [hostname]
-format = '[@$hostname]($style) '
-style = 'bold yellow'
+format = '[$hostname](dimmed italic) '
 
 [git_branch]
 format = '[](#FCF392)[  $branch(:$remote_branch) ](bg:#FCF392 fg:#415966)[ ](#FCF392)'
