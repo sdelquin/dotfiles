@@ -37,10 +37,10 @@ format = '[$symbol](dimmed) '
 
 [os.symbols]
 Macos = ''
-Debian = ''
+Debian = ''
 
 [hostname]
-format = '[$hostname](dimmed italic) '
+format = '[$hostname](green italic) '
 
 [git_branch]
 format = '[](#FCF392)[  $branch(:$remote_branch) ](bg:#FCF392 fg:#415966)[ ](#FCF392)'
