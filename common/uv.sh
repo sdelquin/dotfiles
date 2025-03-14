@@ -1,3 +1,15 @@
+uvi() {
+    DEV_DEPS=(ipython pytest)
+    if [[ $1 ]]; then
+        uv init --bare -p $1
+        uv add --dev "${DEV_DEPS[@]}" -p $1
+    else
+        uv init --bare
+        uv add --dev "${DEV_DEPS[@]}"
+    fi
+    export UV_ENV=`pwd`
+}
+
 mkvirtualenv() {
     if [[ $1 ]]; then
         uv venv --seed -p $1

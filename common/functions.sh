@@ -8,8 +8,8 @@ cd() {
         builtin cd "$@"
     fi
 
-    if [ -z "${DISABLE_AUTO_VENV}" ]
-    then
+    uv_autoactivate
+    if [ -z "${DISABLE_AUTO_VENV}" ] && [ -z "${UV_ENV}" ]; then
         venv_autoactivate
     fi
 }
@@ -36,6 +36,23 @@ venv_autoactivate() {
         if [[ "$PWD"/ != "$parentdir"/* ]] ; then
             deactivate
             venv_autoactivate  # maybe we jumped into a new virtualenv!
+        fi
+    fi
+}
+
+uv_autoactivate() {
+    if [[ -z "$UV_ENV" ]] ; then
+        dir=`pwd`
+        while [[ ! -f $dir/uv.lock && -n $dir ]]; do
+            dir=${dir%/*}
+        done
+        if [[ -f $dir/uv.lock ]]; then
+            export UV_ENV=$dir
+        fi
+    else
+        if [[ "$PWD"/ != "$UV_ENV"/* ]] ; then
+            unset UV_ENV
+            uv_autoactivate  # maybe we jumped into a new uv env!
         fi
     fi
 }

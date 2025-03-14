@@ -16,21 +16,6 @@ $character"""
 
 add_newline = false
 
-[directory]
-truncate_to_repo = false
-truncation_length = 8
-format = '[](fg:#3B76F0)[ 󰝰 $path ](bg:#3B76F0 fg:#23FEFF)[](fg:#3B76F0)'
-
-[custom.virtualenv]
-command = "ve=$(cat $VIRTUAL_ENV/pyvenv.cfg | perl -ne 'print $1 if /[Pp]rompt *= *(.*)/'); pyv=$(python --version | perl -ne 'print $1 if /[Pp]ython *(.*)/'); echo \"$ve 󰌠 $pyv\""
-when = "[[ -n $VIRTUAL_ENV ]]"
-format = '[](#159D5B)[ $output ](bg:#159D5B fg:#0A381F)[](#159D5B)'
-
-[custom.uv]
-command = 'uv run python --version | sed "s/Python //"'
-when = 'ls | grep uv.lock'
-format = '[](#DE60E9)[ uv  $output ](bg:#DE60E9 fg:#480D4D)[](#DE60E9)'
-
 [os]
 disabled = false
 format = '[$symbol](dimmed) '
@@ -42,8 +27,23 @@ Debian = ''
 [hostname]
 format = '[$hostname](green italic) '
 
+[directory]
+truncate_to_repo = false
+truncation_length = 8
+format = '[](fg:#3B76F0)[ 󰝰 $path ](bg:#3B76F0 fg:#c8ebf7)[](fg:#3B76F0)'
+
+[custom.uv]
+command = 'uv run python --version | sed "s/Python //"'
+when = '[[ -n $UV_ENV ]]'
+format = '[](#DE60E9)[ uv](bg:#DE60E9 fg:#480D4D italic)[  $output ](bg:#DE60E9 fg:#480D4D)[](#DE60E9)'
+
+[custom.virtualenv]
+command = "python --version | perl -ne 'print $1 if /[Pp]ython *(.*)/'"
+when = "[[ -n $VIRTUAL_ENV ]]"
+format = '[](#e8cc17)[ venv](bg:#e8cc17 fg:#423a07 italic)[ 󰌪 $output ](bg:#e8cc17 fg:#423a07)[](#e8cc17)'
+
 [git_branch]
-format = '[](#FCF392)[  $branch(:$remote_branch) ](bg:#FCF392 fg:#415966)[ ](#FCF392)'
+format = '[](#0ee8d9)[  $branch(:$remote_branch) ](bg:#0ee8d9 fg:#022926)[ ](#0ee8d9)'
 
 [git_status]
-style = 'bold #FCF392'
+style = 'bold #0ee8d9'
