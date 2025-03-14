@@ -120,7 +120,7 @@ source $DOTFILES/common/shrc
 source $DOTFILES/linux/functions.sh
 source $DOTFILES/linux/aliases.sh
 source $DOTFILES/linux/autocompletion.sh
-source $DOTFILES/linux/starship.sh
+source $DOTFILES/linux/prompt.sh
 source $DOTFILES/linux/magic-enter.sh
 source $DOTFILES/linux/exports.sh
 

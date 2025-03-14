@@ -1,4 +1,5 @@
 # Personalización del prompt
+# La configuración está en ~/.dotfiles/common/starship.toml
 show_newline() {
     # https://bit.ly/4dCTtVC
     if [ -z "$NEW_LINE_BEFORE_PROMPT" ]; then

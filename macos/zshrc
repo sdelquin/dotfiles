@@ -25,7 +25,7 @@ source $DOTFILES/common/shrc
 source $DOTFILES/macos/functions.sh
 source $DOTFILES/macos/aliases.sh
 source $DOTFILES/macos/autocompletion.sh
-source $DOTFILES/macos/starship.sh
+source $DOTFILES/macos/prompt.sh
 source $DOTFILES/macos/exports.sh
 
 # Solución al problema de que salga fondo blanco al pegar texto en consola
