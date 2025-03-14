@@ -25,12 +25,12 @@ Macos = ''
 Debian = ''
 
 [hostname]
-format = '[$hostname](green italic) '
+format = '[](fg:#999999)[󰬀󰬀󰫵 $hostname](dimmed bg:#999999 fg:black)[](fg:#999999) '
 
 [directory]
 truncate_to_repo = false
 truncation_length = 8
-format = '[](fg:#3B76F0)[ 󰝰 $path ](bg:#3B76F0 fg:#c8ebf7)[](fg:#3B76F0)'
+format = '[](fg:#3B76F0)[󰝰 $path ](bg:#3B76F0 fg:#c8ebf7)[](fg:#3B76F0)'
 
 [custom.uv]
 command = 'uv run python --version | sed "s/Python //"'
