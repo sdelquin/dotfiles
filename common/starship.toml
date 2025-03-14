@@ -22,7 +22,7 @@ truncation_length = 8
 format = '[](fg:#3B76F0)[ 󰝰 $path ](bg:#3B76F0 fg:#23FEFF)[](fg:#3B76F0)'
 
 [custom.virtualenv]
-command = "ve=$(cat .venv/pyvenv.cfg | perl -ne 'print $1 if /[Pp]rompt *= *(.*)/'); pyv=$(python --version | perl -ne 'print $1 if /[Pp]ython *(.*)/'); echo \"$ve 󰌠 $pyv\""
+command = "ve=$(cat $VIRTUAL_ENV/pyvenv.cfg | perl -ne 'print $1 if /[Pp]rompt *= *(.*)/'); pyv=$(python --version | perl -ne 'print $1 if /[Pp]ython *(.*)/'); echo \"$ve 󰌠 $pyv\""
 when = "[[ -n $VIRTUAL_ENV ]]"
 format = '[](#159D5B)[ $output ](bg:#159D5B fg:#0A381F)[](#159D5B)'
 
