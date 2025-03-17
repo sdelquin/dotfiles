@@ -9,4 +9,7 @@ show_newline() {
     fi
 }
 PROMPT_COMMAND="show_newline"
+if [ -n "$TEACHING" ]; then
+    source $DOTFILES/common/shortprompt.sh
+fi
 eval "$(starship init bash)"
