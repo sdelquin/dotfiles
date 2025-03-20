@@ -9,6 +9,7 @@ $hostname\
 $directory\
 ${custom.uv}\
 ${custom.virtualenv}\
+${custom.R}\
 $git_branch\
 $git_status\
 \n[╰─](dimmed)\
@@ -42,6 +43,11 @@ format = '[](#2B0117)[ uv](bg:#2B0117 fg:#de60e9 italic)[  $output ](bg:#2
 command = "python --version | perl -ne 'print $1 if /[Pp]ython *(.*)/'"
 when = "[[ -n $VIRTUAL_ENV ]]"
 format = '[](#4F4E00)[ venv](bg:#4F4E00 fg:#F7E316 italic)[ 󰌪 $output ](bg:#4F4E00 fg:#F7E316)[](#4F4E00)'
+
+[custom.R]
+command = "R --version | perl -ne 'print $1 if /R version *(\\d+\\.\\d+\\.\\d+)/'"
+format = '[](#3C3420)[ 󰫿 󰋙 $output ](bg:#3C3420 fg:#F1AF4C)[](#3C3420)'
+detect_extensions = ['R', 'Rmd']
 
 [git_branch]
 format = '[](#022B24)[  $branch(:$remote_branch) ](bg:#022B24 fg:#58F405)[](#022B24)'
