@@ -11,7 +11,8 @@ ${custom.uv}\
 ${custom.virtualenv}\
 ${custom.R}\
 $git_branch\
-$git_status\
+${custom.git}\
+${custom.github}\
 \n[╰─](dimmed)\
 $character"""
 
@@ -52,8 +53,15 @@ detect_extensions = ['R', 'Rmd']
 [git_branch]
 format = '[](#022B24)[  $branch(:$remote_branch) ](bg:#022B24 fg:#58F405)[](#022B24)'
 
-[git_status]
-format = '[](#311B00)[  $all_status$ahead_behind](bg:#311B00 fg:#F66E01)[](#311B00)'
+[custom.git]
+command = "git status --porcelain | perl -ne 'BEGIN {%MAP=(\"A\"=>\"A\", \"M\"=>\"M\", \"D\"=>\"D\", \"??\"=>\"U\")} print \"$MAP{$1}\n\" if /^\\s*([\\S]+)/' | uniq | tr -d '\n'"
+when = '[ -n "$(git status --porcelain)" ]'
+format = '[](#311B00)[ 󰜘 $output ](bg:#311B00 fg:#F66E01)[](#311B00)'
+
+[custom.github]
+command = "git status -uno | perl -0ne 'BEGIN {%MAP=(\"ahead\"=>\"󰕒\", \"behind\"=>\"󰇚\")} print $MAP{$1} if /.*(ahead|pepe).*/'"
+when = "git status -uno | grep -E 'behind|ahead'"
+format = '[](#252E38)[ 󰊤 $output ](bg:#252E38 fg:#A4A4A4)[](#252E38)'
 
 [character]
 success_symbol = '[󰅂](bold #29F407)'
