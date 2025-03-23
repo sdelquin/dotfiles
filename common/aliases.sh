@@ -25,6 +25,8 @@ alias fpp='pip freeze | grep -i'
 alias cdsitepackages='cd $(find . -name site-packages -d)'
 alias disable-auto-venv='export DISABLE_AUTO_VENV=1'
 alias justdjango='curl -fsSL -o justfile https://raw.githubusercontent.com/sdelquin/justfiles/refs/heads/main/justfile.django'
+# uv
+alias uva='uv_autoactivate'
 # Docker
 alias rmdockerexitedcontainers='docker ps -a | perl -nale '\''print $F[0] if /Exited/'\'' | xargs docker rm'
 alias rmdockeranonvolumes='docker volume ls | perl -nale '\''print $F[1] if length($F[1]) == 64'\'' | xargs docker volume rm'
