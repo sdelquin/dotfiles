@@ -59,7 +59,7 @@ detect_extensions = ['R', 'Rmd']
 format = '[](#022B24)[  $branch(:$remote_branch) ](bg:#022B24 fg:#58F405)[](#022B24)'
 
 [custom.git]
-command = "git status --porcelain | perl -ne 'BEGIN {%MAP=(\"A\"=>\"A\", \"M\"=>\"M\", \"D\"=>\"D\", \"??\"=>\"U\")} print \"$MAP{$1}\n\" if /^\\s*([\\S]+)/' | uniq | tr -d '\n'"
+command = "git status --porcelain | perl -ne 'BEGIN {%MAP=(\"A\"=>\"A\", \"M\"=>\"M\", \"D\"=>\"D\", \"??\"=>\"U\")} print \"$MAP{$1}\n\" if /^\\s*([\\S]+)/' | sort | uniq | tr -d '\n'"
 when = '[ -n "$(git status --porcelain)" ]'
 format = '[](#311B00)[ 󰜘 $output ](bg:#311B00 fg:#F66E01)[](#311B00)'
 
