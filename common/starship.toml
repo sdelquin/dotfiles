@@ -35,6 +35,11 @@ truncation_length = 8
 truncation_symbol = '…/'
 format = '[](fg:#394260)[󰝰 $path ](bg:#394260 fg:#769ff0)[󰋑 ](bg:#394260 fg:#141A3B)[](fg:#394260)'
 
+[custom.files]
+command = "ls -1A | wc -l"
+format = '[](#432D1D)[ 󰪶 $output ](bg:#432D1D fg:#CF927C)[](#432D1D)'
+when = ''
+
 [custom.uv]
 command = 'uv run python --version | sed "s/Python //"'
 when = '[[ -n $UV_ENV ]]'
