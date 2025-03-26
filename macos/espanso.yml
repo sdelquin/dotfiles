@@ -121,3 +121,6 @@ matches:
 
   - trigger: ":LOREM"
     replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus sodales gravida. Vivamus mollis arcu id nunc commodo, quis efficitur nisi bibendum. Sed ut erat venenatis, finibus quam vel, tincidunt nisl. Donec ultricies lacus id consequat laoreet. Curabitur id tellus ac tortor euismod fringilla. Sed euismod neque at laoreet imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque blandit ut lectus et blandit. Cras ex nulla, egestas a pretium eget, accumsan a ligula. Fusce dui ex, rhoncus vel est sed, aliquam suscipit ex. Fusce sit amet suscipit urna. Nullam ex risus, gravida et faucibus id, efficitur in mi."
+
+  - trigger: ":sgm"
+    replace: "sdelquin@gmail.com"
