@@ -17,7 +17,7 @@ alias gpull='git pull'
 # Python
 alias a='source .venv/bin/activate'
 alias d='deactivate'
-alias p='clear; ipython -i $DOTFILES/common/ipython.py'
+alias p='clear; uv run ipython'
 alias upip='pip install -U pip'
 alias serve="python -m http.server"
 alias clean_pyc="find . -name '*.pyc' -exec rm {} \;"
