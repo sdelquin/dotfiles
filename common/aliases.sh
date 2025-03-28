@@ -32,3 +32,5 @@ alias rmdockerexitedcontainers='docker ps -a | perl -nale '\''print $F[0] if /Ex
 alias rmdockeranonvolumes='docker volume ls | perl -nale '\''print $F[1] if length($F[1]) == 64'\'' | xargs docker volume rm'
 alias rmdockerorphanimages='docker images | perl -nale '\''print $F[2] if $F[0] =~ /<none>/'\'' | xargs docker rmi'
 alias rmdocker='rmdockerexitedcontainers && rmdockeranonvolumes && rmdockerorphanimages'
+# R
+alias r='clear; radian'

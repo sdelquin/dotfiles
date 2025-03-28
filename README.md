@@ -23,7 +23,7 @@ git clone git@github.com:sdelquin/dotfiles.git ~/.dotfiles
 ### Dependencias <!-- omit from toc -->
 
 ```console
-uv tool install flake8 ipython isort mypy pytest
+uv tool install flake8 ipython isort mypy pytest radian
 ```
 
 ### Symlinks <!-- omit from toc -->
@@ -40,6 +40,7 @@ ln -s ~/.dotfiles/common/starship.toml ~/.config/starship.toml
 
 ln -s ~/.dotfiles/common/mypy.ini ~/.config/mypy/config
 ln -s ~/.dotfiles/common/ipython.py ~/.ipython/profile_default/ipython_config.py
+ln -s ~/.dotfiles/common/radian ~/.radian_profile
 ```
 
 ## 🍎 MacOS
