@@ -1,8 +1,12 @@
+# https://ipython.readthedocs.io/en/stable/config/options/terminal.html
+import os
 import random
 import sys
 
 import IPython
 from IPython.terminal.prompts import Prompts, Token
+from prompt_toolkit.application.current import get_app
+from prompt_toolkit.key_binding.vi_state import InputMode
 
 ZEN = [
     'Beautiful is better than ugly.',
@@ -50,13 +54,40 @@ def banner2() -> str:
     return f'"{zen}"\n'
 
 
+def set_cursor_style(mode):
+    # 0 = blinking block, 1 = blinking underline, 2 = steady block, 3 = blinking bar, 5 = steady bar
+    styles = {
+        'navigation': '\x1b[2 q',  # bloque sólido
+        'insert': '\x1b[5 q',  # línea fina
+    }
+    print(styles[mode], end='', flush=True)
+
+
+def on_mode_change(event):
+    app = get_app()
+    mode = app.vi_state.input_mode
+    if mode == InputMode.INSERT:
+        set_cursor_style('insert')
+    else:
+        set_cursor_style('navigation')
+
+
+def load_ipython_extension(ipython):
+    app = get_app()
+    app.vi_state.input_mode = InputMode.NAVIGATION
+    app.vi_state.on_mode_changed += on_mode_change
+    set_cursor_style('navigation')
+
+
 c = get_config()  # type: ignore # noqa: F821
 
 c.TerminalInteractiveShell.prompts_class = CustomPrompt
-c.InteractiveShellApp.extensions = ['autoreload']
+c.InteractiveShellApp.extensions = ['autoreload', '__main__']
 c.InteractiveShellApp.exec_lines = ['autoreload 2']
 c.TerminalInteractiveShell.editing_mode = 'vi'
-c.HistoryManager.hist_file = ':memory:'
+c.TerminalInteractiveShell.timeoutlen = 0.2
+if os.environ.get('TEACHING'):
+    c.HistoryManager.hist_file = ':memory:'
 c.TerminalInteractiveShell.confirm_exit = False
 c.TerminalInteractiveShell.banner1 = banner1()
 c.TerminalInteractiveShell.banner2 = banner2()
