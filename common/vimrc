@@ -71,6 +71,13 @@ set backspace=indent,eol,start  " backscape like in other programs
 set mouse=
 set shortmess-=S  " show search count in the statusline
 
+if &term =~ 'xterm'
+  let &t_SI = "\<Esc>[5 q"   " Insert mode: barra
+  let &t_EI = "\<Esc>[2 q"   " Normal mode: bloque
+endif
+" Time to switch from INSERT to NORMAL (ms)
+set timeoutlen=10
+
 " Disable beep and flash with an autocmd
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
