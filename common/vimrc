@@ -75,8 +75,6 @@ if &term =~ 'xterm'
   let &t_SI = "\<Esc>[5 q"   " Insert mode: barra
   let &t_EI = "\<Esc>[2 q"   " Normal mode: bloque
 endif
-" Time to switch from INSERT to NORMAL (ms)
-set timeoutlen=10
 
 " Disable beep and flash with an autocmd
 set noerrorbells visualbell t_vb=
