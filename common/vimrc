@@ -34,6 +34,7 @@ set autoindent  " Auto indentation
 set backspace=indent,eol,start  " Backscape like in other programs
 set shortmess-=S  " Show search count in the statusline
 set noerrorbells visualbell t_vb=  " Disable beep with an autocmd
+set background=dark
 
 " ==============================================================================
 " CUSTOM VARIABLES:
@@ -137,7 +138,7 @@ set ls=2  " https://github.com/itchyny/lightline.vim?tab=readme-ov-file#introduc
 " ------------------------------------------------------------------------------
 " NLKNguyen/papercolor-theme -- https://github.com/NLKNguyen/papercolor-theme
 " ------------------------------------------------------------------------------
-colorscheme Papercolor
+colorscheme PaperColor
 
 " ------------------------------------------------------------------------------
 " dense-analysis/ale -- https://github.com/dense-analysis/ale
