@@ -1,7 +1,5 @@
 # https://github.com/randy3k/radian?tab=readme-ov-file#settings
 
 options(
-    radian.editing_mode = "vi",
-    radian.prompt = "\033[1;34m󰫿󰅂 \033[0m",
-    radian.show_vi_mode_prompt = FALSE
+    radian.prompt = "\033[1;34m󰫿󰅂 \033[0m"
 )

@@ -40,3 +40,7 @@ share() {
     echo "Download it with: curl -O $url"
 }
 
+# https://github.com/pimterry/notes
+ng () {
+    rg -i $1 $NOTES_DIRECTORY    
+}

@@ -11,3 +11,5 @@ MAGIC_ENTER_OTHER_COMMAND='ll'
 export PATH=$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH:$HOMEBREW_PREFIX/opt/python@3.13/libexec/bin:$HOME/bin
 # https://stackoverflow.com/a/69990888
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+# https://github.com/pimterry/notes
+export NOTES_DIRECTORY="$HOME/Dropbox/Aplicaciones/Notes"
