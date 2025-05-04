@@ -42,5 +42,5 @@ share() {
 
 # https://github.com/pimterry/notes
 ng () {
-    rg -i $1 $NOTES_DIRECTORY    
+    rg -i --heading --line-number --color=always "$1" "$NOTES_DIRECTORY" | perl -pe "s|\Q$NOTES_DIRECTORY/||"
 }
