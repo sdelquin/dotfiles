@@ -1,5 +1,7 @@
 # dotfiles <!-- omit from toc -->
 
+**CUSTOM DOT FILES**
+
 - [Instalación](#instalación)
 - [Común](#común)
 - [🍎 MacOS](#-macos)
@@ -10,37 +12,36 @@
   - [Symlinks](#symlinks-1)
 - [Vim](#vim)
 
-Custom dot files
-
 ## Instalación
 
 ```console
 git clone git@github.com:sdelquin/dotfiles.git ~/.dotfiles
 ```
 
+<!-- prettier-ignore -->
+> [!NOTE]
+> `sudo apt-get install -y git` si no tienes `git` instalado.
+
 ## Común
 
 ### Dependencias <!-- omit from toc -->
 
-```console
-uv tool install flake8 ipython isort mypy pytest radian
+```bash
+for tool in ruff mypy ipython radian; do
+  uv tool install $tool
+done
 ```
+
+<!-- prettier-ignore -->
+> [!NOTE]
+> `curl -LsSf https://astral.sh/uv/install.sh | sh` si no tienes `uv` instalado.
 
 ### Symlinks <!-- omit from toc -->
 
-```console
-ln -s ~/.dotfiles/common/vimrc ~/.vimrc
-ln -s ~/.dotfiles/common/latexmkrc ~/.latexmkrc
-ln -s ~/.dotfiles/common/gitconfig ~/.gitconfig
+Los «symlinks» se pueden crear de forma automática ejecutando el script [`symlinks.sh`](symlinks.sh):
 
-ln -s ~/.dotfiles/common/flake8 ~/.config/flake8
-ln -s ~/.dotfiles/common/black ~/.config/black
-ln -s ~/.dotfiles/common/ruff.toml ~/.config/ruff.toml
-ln -s ~/.dotfiles/common/starship.toml ~/.config/starship.toml
-
-ln -s ~/.dotfiles/common/mypy.ini ~/.config/mypy/config
-ln -s ~/.dotfiles/common/ipython.py ~/.ipython/profile_default/ipython_config.py
-ln -s ~/.dotfiles/common/radian ~/.radian_profile
+```bash
+./symlinks.sh
 ```
 
 ## 🍎 MacOS
@@ -63,7 +64,10 @@ ln -sf ~/.dotfiles/macos/espanso.yml "/Users/sdelquin/Library/Application Suppor
 
 ### Dependencias
 
-```console
+> [!CAUTION]
+> Buscar las últimas versiones de cada paquete en sus respectivas páginas de GitHub.
+
+```bash
 # lsd
 curl -LO https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-musl_0.23.1_amd64.deb
 sudo dpkg -i lsd-musl_0.23.1_amd64.deb
@@ -93,7 +97,8 @@ Para usar la función `copy()` necesitamos instalar la [Shell Integration de iTe
 sudo apt install -y xclip fonts-noto-color-emoji
 ```
 
-> 💡 Para que funcione `xclip` necesitamos disponer de un servidor X
+> [!NOTE]
+> Para que funcione `xclip` necesitamos disponer de un servidor X
 
 ### Symlinks
 
