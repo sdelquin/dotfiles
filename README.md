@@ -14,7 +14,7 @@
 
 ## Instalación
 
-```console
+```bash
 git clone git@github.com:sdelquin/dotfiles.git ~/.dotfiles
 ```
 
@@ -48,13 +48,13 @@ Los «symlinks» se pueden crear de forma automática ejecutando el script [`sym
 
 ### Dependencias
 
-```console
+```bash
 brew install lsd bat ripgrep delta zoxide starship
 ```
 
 ### Symlinks
 
-```console
+```bash
 ln -sf ~/.dotfiles/macos/zshrc ~/.zshrc
 
 ln -sf ~/.dotfiles/macos/espanso.yml "/Users/sdelquin/Library/Application Support/espanso/match/base.yml"
@@ -93,7 +93,7 @@ curl -sS https://starship.rs/install.sh | sh
 
 Para usar la función `copy()` necesitamos instalar la [Shell Integration de iTerm2](https://iterm2.com/documentation-utilities.html). En otro caso se puede usar la función `xcopy()` que hace uso de `xclip`.
 
-```console
+```bash
 sudo apt install -y xclip fonts-noto-color-emoji
 ```
 
@@ -102,7 +102,7 @@ sudo apt install -y xclip fonts-noto-color-emoji
 
 ### Symlinks
 
-```console
+```bash
 ln -sf ~/.dotfiles/linux/bashrc ~/.bashrc
 ```
 
@@ -110,21 +110,31 @@ ln -sf ~/.dotfiles/linux/bashrc ~/.bashrc
 
 Instalar el gestor de paquetes **vim plug**:
 
-```console
+```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 Instalar los plugins:
 
-```console
+```bash
 vi +'PlugInstall --sync' +qa
 ```
+
+> [!CAUTION]
+> Es posible que aparezca el siguiente error (pero no es crítico):
+>
+> ```bash
+> Error detected while processing /home/sdelquin/.vimrc:
+> line  143:
+> E185: Cannot find color scheme 'PaperColor'
+> Press ENTER or type command to continue
+> ```
 
 ### Sólo para Linux <!-- omit from toc -->
 
 Habilitar `sudo` para que utilice las mismas configuraciones `vim`:
 
-```console
+```bash
 sudo -- sh -c "ln -sf $HOME/.vimrc /root/.vimrc; ln -sf $HOME/.vim /root/.vim"
 ```
