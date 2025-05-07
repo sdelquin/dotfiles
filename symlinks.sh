@@ -1,5 +1,8 @@
 #!/bin/bash
 
+mkdir -p ~/.config/mypy
+mkdir -p ~/.ipython/profile_default
+
 # prompt
 ln -s ~/.dotfiles/common/starship.toml ~/.config/starship.toml
 
