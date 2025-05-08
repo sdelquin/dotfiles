@@ -124,3 +124,6 @@ matches:
 
   - trigger: ":sgm"
     replace: "sdelquin@gmail.com"
+
+  - trigger: "factura"
+    replace: "Buenos días Etaín,\n\nAyer te dejé en el buzón una factura de XXXX por importe de XXXX.\n\nEs para pagarme a mi por transferencia.\n\nGracias.\n\nSaludos,"
