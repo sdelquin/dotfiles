@@ -82,7 +82,7 @@ nnoremap vv ^vg_
 " Remap up and down keys to navigate on warp lines
 nnoremap <up> gk
 nnoremap <down> gj
-nnoremap g gk
+nnoremap k gk
 nnoremap j gj
 
 " Switch opened buffers
