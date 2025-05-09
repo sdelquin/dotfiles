@@ -27,7 +27,7 @@ Macos = ''
 Debian = ''
 
 [hostname]
-format = '[](fg:#999999)[󰬀󰬀󰫵 $hostname](dimmed bg:#999999 fg:black)[](fg:#999999) '
+format = '[█](fg:#570300)[󰬀󰬀󰫵 $hostname 󰘊](bg:#570300 fg:#F66E01)[█](fg:#570300) '
 
 [directory]
 truncate_to_repo = false
