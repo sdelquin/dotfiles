@@ -44,7 +44,7 @@ let &t_SI = "\<Esc>[5 q"  " Insert mode: |
 let &t_EI = "\<Esc>[2 q"  " Normal mode: ▮
 let g:python_highlight_all = 1  " Enhanced vim syntax highlighting
 let mapleader=" "  " Leader key is whitespace
-let g:markdown_fenced_languages = ['bash', 'python', 'R']  " https://is.gd/Vd6kRu
+let g:markdown_fenced_languages = ['bash', 'python', 'r']  " https://is.gd/Vd6kRu
 
 " ==============================================================================
 " AUTOCMD:
