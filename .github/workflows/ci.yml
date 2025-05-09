@@ -12,7 +12,7 @@ jobs:
       - name: Execute remote deploy commands
         uses: appleboy/ssh-action@master
         with:
-          host: sdelquin.me
+          host: matraka.es
           username: ${{ secrets.PRODUCTION_SSH_USERNAME }}
           key: ${{ secrets.PRODUCTION_SSH_KEY }}
           script: cd ~/.dotfiles && git pull && vim +'PlugInstall --sync' +qa

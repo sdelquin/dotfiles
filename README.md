@@ -49,7 +49,7 @@ Los «symlinks» se pueden crear de forma automática ejecutando el script [`sym
 ### Dependencias
 
 ```bash
-brew install lsd bat ripgrep delta zoxide starship
+brew install lsd bat ripgrep fd delta zoxide starship
 ```
 
 ### Symlinks
@@ -79,6 +79,10 @@ sudo dpkg -i bat-musl_0.22.1_amd64.deb
 # ripgrep
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
 sudo dpkg -i ripgrep_13.0.0_amd64.deb
+
+# fd
+curl -LO https://github.com/sharkdp/fd/releases/download/v10.2.0/fd-musl_10.2.0_amd64.deb
+sudo dkpg -i fd-musl_10.2.0_amd64.deb
 
 # delta
 curl -LO https://github.com/dandavison/delta/releases/download/0.15.1/git-delta-musl_0.15.1_amd64.deb
