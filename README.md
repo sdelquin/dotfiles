@@ -41,6 +41,7 @@ done
 Los «symlinks» se pueden crear de forma automática ejecutando el script [`symlinks.sh`](symlinks.sh):
 
 ```bash
+cd .dotfiles
 ./symlinks.sh
 ```
 
@@ -69,24 +70,24 @@ ln -sf ~/.dotfiles/macos/espanso.yml "/Users/sdelquin/Library/Application Suppor
 
 ```bash
 # lsd
-curl -LO https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-musl_0.23.1_amd64.deb
-sudo dpkg -i lsd-musl_0.23.1_amd64.deb
+curl -LO https://github.com/lsd-rs/lsd/releases/download/v1.1.5/lsd-musl_1.1.5_amd64.deb
+sudo dpkg -i lsd-musl_1.1.5_amd64.deb
 
 # bat
-curl -LO https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-musl_0.22.1_amd64.deb
-sudo dpkg -i bat-musl_0.22.1_amd64.deb
+https://github.com/sharkdp/bat/releases/download/v0.25.0/bat_0.25.0_amd64.deb
+sudo dpkg -i bat-musl_0.25.0_amd64.deb
 
 # ripgrep
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
-sudo dpkg -i ripgrep_13.0.0_amd64.deb
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep_14.1.1-1_amd64.deb
+sudo dpkg -i ripgrep_14.1.1-1_amd64.deb
 
 # fd
 curl -LO https://github.com/sharkdp/fd/releases/download/v10.2.0/fd-musl_10.2.0_amd64.deb
 sudo dkpg -i fd-musl_10.2.0_amd64.deb
 
 # delta
-curl -LO https://github.com/dandavison/delta/releases/download/0.15.1/git-delta-musl_0.15.1_amd64.deb
-sudo dpkg -i git-delta-musl_0.15.1_amd64.deb
+curl -LO https://github.com/dandavison/delta/releases/download/0.18.2/git-delta-musl_0.18.2_amd64.deb
+sudo dpkg -i git-delta-musl_0.18.2_amd64.deb
 
 # zoxide
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
