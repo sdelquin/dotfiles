@@ -41,7 +41,7 @@ format = '[](#432D1D)[ 󰪶 $output ](bg:#432D1D fg:#CF927C)[](#432D1D)'
 when = ''
 
 [custom.uv]
-command = 'uv run python --version | sed "s/Python //"'
+command = "uv venv python 2>&1 | perl -ne 'print $1 if /Using .*?(\\d+\\.\\d+\\.\\d+)/'"
 when = '[[ -n $UV_ENV ]]'
 format = '[](#2B0117)[ uv](bg:#2B0117 fg:#de60e9 italic)[  $output ](bg:#2B0117 fg:#de60e9)[](#2B0117)'
 
