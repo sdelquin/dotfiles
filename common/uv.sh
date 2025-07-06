@@ -7,6 +7,7 @@ uvi() {
         uv init --bare
         uv add --dev "${DEV_DEPS[@]}"
     fi
+    echo '\nprod = []' >> pyproject.toml
     export UV_ENV=`pwd`
 }
 
