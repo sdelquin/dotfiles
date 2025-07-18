@@ -100,6 +100,9 @@ nnoremap mm :exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 " Copy to system clipboard
 nnoremap <leader>y "*yy
 
+" Open file in Marked 2 (https://marked2app.com/)
+nnoremap <leader>m :silent !open -a "Marked 2" "%"<CR>:redraw!<CR>
+
 " ------------------------------------------------------------------------------
 " Command-line mappings
 " ------------------------------------------------------------------------------
