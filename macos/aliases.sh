@@ -19,3 +19,6 @@ alias marked='open -a "Marked 2"'
 # Cutting Optimization Pro (via Whisky App)
 alias ematerials='vi "/Users/sdelquin/Library/Containers/com.isaacmarovitz.Whisky/Bottles/74DF8116-2E4C-4535-8B11-2E8D09548484/drive_c/users/crossover/Documents/Optimal Programs/Cutting Optimization pro 5/materials.xml"'
 alias estock='vi "/Users/sdelquin/Library/Containers/com.isaacmarovitz.Whisky/Bottles/74DF8116-2E4C-4535-8B11-2E8D09548484/drive_c/users/crossover/Documents/Optimal Programs/Cutting Optimization pro 5/stock2d.xml"'
+# PyPI
+alias pypi-token='cat ~/.pypirc | grep "\[pypi\]" -A2 | tail -1 | perl -ne '"'"'print $1 if /password *= *(.*)/'"'"''
+alias testpypi-token='cat ~/.pypirc | grep "\[testpypi\]" -A2 | tail -1 | perl -ne '"'"'print $1 if /password *= *(.*)/'"'"''

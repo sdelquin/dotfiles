@@ -13,3 +13,6 @@ export PATH=$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH:$HOMEBREW_PREFIX/o
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # https://github.com/pimterry/notes
 export NOTES_DIRECTORY="$HOME/Dropbox/Aplicaciones/Notes"
+# PyPI
+export PYPI_TOKEN=`pypi-token`
+export TESTPYPI_TOKEN=`testpypi-token`
