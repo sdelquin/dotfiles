@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'chrisbra/csv.vim'
     Plug 'ervandew/supertab'
     Plug 'tpope/vim-commentary'
+    Plug 'SirVer/ultisnips'  " los snippets están en ~/.vim/UltiSnips
 call plug#end()
 
 " ==============================================================================
@@ -192,5 +193,19 @@ let g:rainbow_active = 1
 " ------------------------------------------------------------------------------
 " chrisbra/csv.vim -- https://github.com/chrisbra/csv.vim
 " ------------------------------------------------------------------------------
-nnoremap <leader>aa :%ArrangeColumn<CR>
-vnoremap <leader>aa :ArrangeColumn<CR>
+nnoremap <leader>cc :%ArrangeColumn<CR>
+vnoremap <leader>cc :ArrangeColumn<CR>
+
+" ------------------------------------------------------------------------------
+" SirVer/ultisnips -- https://github.com/SirVer/ultisnips
+" ------------------------------------------------------------------------------
+" Tell SuperTab to use UltiSnips to expand snippets
+let g:SuperTabDefaultCompletionType = '<c-n>'
+
+" Integration for SuperTab not blocking UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" SuperTab integration with UltiSnips
+let g:SuperTabRetainCompletionType = 2

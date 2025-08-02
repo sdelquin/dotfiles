@@ -16,3 +16,6 @@ ln -s ~/.dotfiles/common/ruff.toml ~/.config/ruff.toml
 ln -s ~/.dotfiles/common/mypy.ini ~/.config/mypy/config
 ln -s ~/.dotfiles/common/ipython.py ~/.ipython/profile_default/ipython_config.py
 ln -s ~/.dotfiles/common/radian ~/.radian_profile
+
+# UltiSnips (Vim snippets)
+ln -s ~/.dotfiles/common/UltiSnips ~/.vim/UltiSnips
