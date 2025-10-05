@@ -130,3 +130,9 @@ matches:
 
   - trigger: ":mym"
     replace: "[MyM Solar](https://mymsolar.com/)"
+
+  - trigger: ":shebash"
+    replace: "#!/usr/bin/env bash"
+
+  - trigger: ":shepython"
+    replace: "#!/usr/bin/env python"
