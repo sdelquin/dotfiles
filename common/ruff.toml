@@ -1,11 +1,14 @@
+# https://docs.astral.sh/ruff/settings/
 line-length = 100
+
+[lint]
 extend-select = ["Q", "ARG001"]
 
-[flake8-quotes]
+[lint.flake8-quotes]
 inline-quotes = "single"
 
 [format]
 quote-style = "single"
 
-[flake8-unused-arguments]
+[lint.flake8-unused-arguments]
 ignore-variadic-names = true
