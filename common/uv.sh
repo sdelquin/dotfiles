@@ -1,14 +1,14 @@
 uvi() {
     DEV_DEPS=(ipython pytest)
     if [[ $1 ]]; then
-        uv init --bare -p $1
+        uv init --bare --no-workspace -p $1
         uv add --dev "${DEV_DEPS[@]}" -p $1
     else
-        uv init --bare
+        uv init --bare --no-workspace
         uv add --dev "${DEV_DEPS[@]}"
     fi
     echo '\nprod = []' >> pyproject.toml
-    export UV_ENV=`pwd`
+    uva  # "activate" uv environment
 }
 
 mkvirtualenv() {
