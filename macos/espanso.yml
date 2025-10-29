@@ -136,3 +136,9 @@ matches:
 
   - trigger: ":shepython"
     replace: "#!/usr/bin/env python"
+
+  - trigger: ":sheuv"
+    replace: "#!/usr/bin/env -S uv run --script"
+
+  - trigger: ":uvscript"
+    replace: "#!/usr/bin/env -S uv run --script\n# /// script\n# requires-python = \">=3.12\"\n# dependencies = []\n# ///"
