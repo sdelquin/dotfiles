@@ -104,6 +104,9 @@ nnoremap <leader>y "*yy
 " Open file in Marked 2 (https://marked2app.com/)
 nnoremap <leader>m :silent !open -a "Marked 2" "%"<CR>:redraw!<CR>
 
+" Open terminal (vertical right side)
+nnoremap <leader>t :vertical belowright terminal<CR>
+
 " ------------------------------------------------------------------------------
 " Command-line mappings
 " ------------------------------------------------------------------------------
