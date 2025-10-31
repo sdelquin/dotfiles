@@ -107,6 +107,9 @@ nnoremap <leader>m :silent !open -a "Marked 2" "%"<CR>:redraw!<CR>
 " Open terminal (vertical right side)
 nnoremap <leader>t :vertical belowright terminal<CR>
 
+" Toggle relative line numbers
+nnoremap <leader>r :set relativenumber!<CR>
+
 " ------------------------------------------------------------------------------
 " Command-line mappings
 " ------------------------------------------------------------------------------
