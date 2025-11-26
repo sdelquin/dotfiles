@@ -110,6 +110,9 @@ nnoremap <leader>t :vertical belowright terminal<CR>
 " Toggle relative line numbers
 nnoremap <leader>r :set relativenumber!<CR>
 
+" Quick save
+nnoremap <leader><leader> :w<CR>
+
 " ------------------------------------------------------------------------------
 " Command-line mappings
 " ------------------------------------------------------------------------------
