@@ -9,6 +9,7 @@ alias o='open .'
 alias mount-medusa="open 'smb://sdelqui@TFQSC501/Usuarios/sdelqui'"
 alias iface='/sbin/ifconfig | perl -nle '"'"'print $1 if /inet *(\d+\.\d+\.\d+\.\d+)/'"'"' | grep -v ^127'
 alias mserve='serve -b $(iface)'
+alias s="$HOME/bin/bash-screensavers/screensaver.sh matrix"
 # https://github.com/pimterry/notes
 alias nn="notes new"
 alias nf="notes find"
