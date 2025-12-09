@@ -24,3 +24,5 @@ alias cut-docs='cd "/Users/sdelquin/Library/Containers/com.isaacmarovitz.Whisky/
 # PyPI
 alias pypi-token='cat ~/.pypirc | grep "\[pypi\]" -A2 | tail -1 | perl -ne '"'"'print $1 if /password *= *(.*)/'"'"''
 alias testpypi-token='cat ~/.pypirc | grep "\[testpypi\]" -A2 | tail -1 | perl -ne '"'"'print $1 if /password *= *(.*)/'"'"''
+# pypas
+alias pypas-dev='~/code/pypi/pypas-cli/.venv/bin/pypas'
