@@ -113,6 +113,9 @@ nnoremap <leader>r :set relativenumber!<CR>
 " Quick save
 nnoremap <leader><leader> :w<CR>
 
+" Quick save & exit
+nnoremap <leader>q :wq<CR>
+
 " ------------------------------------------------------------------------------
 " Command-line mappings
 " ------------------------------------------------------------------------------
