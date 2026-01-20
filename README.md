@@ -57,8 +57,6 @@ brew install lsd bat ripgrep fd delta zoxide starship
 
 ```bash
 ln -sf ~/.dotfiles/macos/zshrc ~/.zshrc
-
-ln -sf ~/.dotfiles/macos/espanso.yml "/Users/sdelquin/Library/Application Support/espanso/match/base.yml"
 ```
 
 ## 🐧 Linux
