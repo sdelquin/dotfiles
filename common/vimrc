@@ -12,7 +12,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'dense-analysis/ale'
     Plug 'luochen1990/rainbow'
-    Plug 'chrisbra/csv.vim'
     Plug 'ervandew/supertab'
     Plug 'tpope/vim-commentary'
     Plug 'SirVer/ultisnips'  " los snippets están en ~/.vim/UltiSnips
