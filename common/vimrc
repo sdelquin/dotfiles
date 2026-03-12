@@ -154,6 +154,20 @@ let g:ctrlp_working_path_mode = 0
 set ttimeoutlen=0  " https://github.com/vim-airline/vim-airline/issues/1199#issuecomment-287362482
 set ls=2  " https://github.com/itchyny/lightline.vim?tab=readme-ov-file#introduction
 
+let g:lightline = {
+\ 'active': {
+\   'left': [ [ 'mode', 'paste' ],
+\             [ 'readonly', 'filename', 'modified' ] ]
+\ },
+\ 'component_function': {
+\   'filename': 'LightlineFilename',
+\ },
+\ }
+
+function! LightlineFilename()
+  return expand('%:.')
+endfunction
+
 " ------------------------------------------------------------------------------
 " NLKNguyen/papercolor-theme -- https://github.com/NLKNguyen/papercolor-theme
 " ------------------------------------------------------------------------------

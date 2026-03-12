@@ -26,6 +26,7 @@ alias cdsitepackages='cd $(find . -name site-packages -d)'
 alias disable-auto-venv='export DISABLE_AUTO_VENV=1'
 alias t='pytest'
 alias pt='pypas test'
+alias pts='pypas test | grep "RESULTADO FINAL" -A4'
 # uv
 alias uva='uv_autoactivate'
 # Docker
