@@ -26,3 +26,5 @@ alias pypi-token='cat ~/.pypirc | grep "\[pypi\]" -A2 | tail -1 | perl -ne '"'"'
 alias testpypi-token='cat ~/.pypirc | grep "\[testpypi\]" -A2 | tail -1 | perl -ne '"'"'print $1 if /password *= *(.*)/'"'"''
 # pypas
 alias pypas-dev='~/code/pypi/pypas-cli/.venv/bin/pypas'
+# Tailscale
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
