@@ -44,3 +44,13 @@ share() {
 ng () {
     rg -i --heading --line-number --color=always "$1" "$NOTES_DIRECTORY" | perl -pe "s|\Q$NOTES_DIRECTORY/||"
 }
+
+# https://github.com/pimterry/notes
+ns () {
+    notes search "$1" | grep -E '.md$'
+}
+
+# https://github.com/pimterry/notes
+nf () {
+    notes find "$1" | grep -E '.md$'
+}

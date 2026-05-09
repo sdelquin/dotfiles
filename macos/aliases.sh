@@ -12,8 +12,8 @@ alias mserve='serve -b $(iface)'
 alias s="$HOME/bin/bash-screensavers/screensaver.sh matrix"
 # https://github.com/pimterry/notes
 alias nn="notes new"
-alias nf="notes find"
-alias ns="notes search"
+# ns es una función definida en .dotfiles/macos/functions.sh
+# nf es una función definida en .dotfiles/macos/functions.sh
 alias no="notes open"
 alias nc="notes cat"  # /usr/local/bin/notes parcheado en L315 (https://n9.cl/89ip3)
 alias marked='open -a "Marked 2"'
