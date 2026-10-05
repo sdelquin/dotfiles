@@ -28,3 +28,5 @@ alias testpypi-token='cat ~/.pypirc | grep "\[testpypi\]" -A2 | tail -1 | perl -
 alias pypas-dev='~/code/pypi/pypas-cli/.venv/bin/pypas'
 # Tailscale
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+# Reiniciar servicio de portapapeles compartido Apple (macOS <-> iPhone)
+alias clip-restart="killall sharingd && killall pboard"
