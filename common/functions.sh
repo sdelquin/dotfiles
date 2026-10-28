@@ -62,3 +62,8 @@ uv_autoactivate() {
         fi
     fi
 }
+
+vit() {
+    mkdir -p `dirname $1`
+    vi $1
+}
