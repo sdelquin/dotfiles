@@ -1,5 +1,0 @@
-# https://github.com/randy3k/radian?tab=readme-ov-file#settings
-
-options(
-    radian.prompt = "\033[1;34m󰫿󰅂 \033[0m"
-)

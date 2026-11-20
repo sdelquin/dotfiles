@@ -24,7 +24,6 @@ alias clean_pyc="find . -name '*.pyc' -exec rm {} \;"
 alias fpp='pip freeze | grep -i'
 alias cdsitepackages='cd $(find . -name site-packages -d)'
 alias disable-auto-venv='export DISABLE_AUTO_VENV=1'
-alias t='pytest'
 alias pt='pypas test'
 alias pts='pypas test | grep "RESULTADO FINAL" -A4'
 # uv
@@ -34,5 +33,3 @@ alias rmdockerexitedcontainers='docker ps -a | perl -nale '\''print $F[0] if /Ex
 alias rmdockeranonvolumes='docker volume ls | perl -nale '\''print $F[1] if length($F[1]) == 64'\'' | xargs docker volume rm'
 alias rmdockerorphanimages='docker images | perl -nale '\''print $F[2] if $F[0] =~ /<none>/'\'' | xargs docker rmi'
 alias rmdocker='rmdockerexitedcontainers && rmdockeranonvolumes && rmdockerorphanimages'
-# R
-alias r='clear; radian'

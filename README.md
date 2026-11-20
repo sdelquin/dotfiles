@@ -27,7 +27,7 @@ git clone git@github.com:sdelquin/dotfiles.git ~/.dotfiles
 ### Dependencias <!-- omit from toc -->
 
 ```bash
-for tool in ruff mypy ipython radian; do
+for tool in ipython ruff ty pypas-cli; do
   uv tool install $tool
 done
 ```

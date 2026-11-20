@@ -3,6 +3,7 @@ line-length = 100
 
 [lint]
 extend-select = ["Q", "ARG001"]
+ignore = ["PLR1730"]
 
 [lint.flake8-quotes]
 inline-quotes = "single"

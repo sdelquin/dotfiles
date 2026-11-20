@@ -181,10 +181,10 @@ colorscheme PaperColor
 " Linters:
 "   Tool installation:
 "       $ uv tool install ruff
-"       $ uv tool install mypy
+"       $ uv tool install ty
 "   ALE help inside vim:
 "       :help ale-python-ruff
-"       :help ale-python-mypy
+"       :help ale-python-ty
 
 " Disable real-time linting
 let g:ale_lint_on_text_changed = 'never'
@@ -192,9 +192,8 @@ let g:ale_lint_on_insert_leave = 0
 " Enable linting on save
 let g:ale_lint_on_save = 1
 let g:ale_linters = {
-\   'python': ['ruff', 'mypy'],
+\   'python': ['ruff', 'ty'],
 \}
-let g:ale_python_mypy_options = '--config-file ~/.config/mypy/config'
 
 " Fixers:
 "   Tool installation:
